@@ -1,0 +1,278 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Inline SVG in XHTML</title>
+		<style type="text/css">
+			h1 {font-family:"Segoe UI Light"; font-weight:normal; text-align: center}
+			h2 {font-family:"Segoe UI Semibold"; font-weight:normal}
+			body {font-family:"Segoe UI"; font-size:10pt}
+		</style>
+	</head>
+	<body>
+		<h1>Inline SVG in XHTML</h1>
+
+		<h2>Example 1: A Simple Circle</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<circle
+				cx="150" cy="100"
+				r="50" />
+		</svg>
+
+		<h2>Example 2: A Simple Rectangle</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<rect
+				x="10" y="10"
+				width="100" height="45" />
+		</svg>
+
+		<h2>Example 3: A Rectangle with rounded corners</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<rect
+				x="10" y="10"
+				width="100" height="45"
+				rx="10" ry="10"/>
+		</svg>
+
+		<h2>Example 4: An Simple ellipse</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<ellipse
+				cx="100" cy="100"
+				rx="100" ry="45"/>
+		</svg>
+
+		<h2>Example 5: a Simple Line</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<line
+				x1="10" y1="5"
+				x2="100" y2="45"
+				stroke="#ff0000"/>
+		</svg>
+
+		<h2>Example 6: A Simple Polyline</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<polyline
+				points="10,5 100,45 200,5 250,180"
+				stroke="#ff0000"
+				fill="none"/>
+		</svg>
+
+		<h2>Example 7: An simple polygon</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<polygon
+				points="10,5 100,45 200,5 250,180"/>
+		</svg>
+
+		<h2>Example 8: Simple Text</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<text
+				x="50" y="50"
+				font-family="Arial">
+	  			Hello World in Arial
+			</text>
+		</svg>
+
+		<h2>Example 9: Text Font family and size</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<text
+				x="50" y="50"
+				font-family="Arial" font-size="25">
+	  			Setting the font to Arial 30pt
+			</text>
+		</svg>
+
+		<h2>Example 10: Text Formatting Weight and Style and Decoration</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<text x="50" y="20" font-weight="normal">normal</text>
+			<text x="50" y="40" font-weight="bold">bold</text>
+			<text x="50" y="60" font-style="italic">italic</text>
+			<text x="50" y="80" text-decoration="underline">underline</text>
+			<text x="50" y="100"
+				font-weight="bold" font-style="italic"
+				text-decoration="underline" >
+				bold, italic, and underlined
+			</text>
+		</svg>
+
+		<h2>Example 11: Flat fill colors</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<rect
+				x="10"
+				y="10"
+				width="100"
+				height="100"
+				fill="#ff0000"/>
+		</svg>
+
+		<h2>Example 12: Linear Gradient Fill - Left to right</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<defs>
+				<linearGradient id = "lineargradient1" x1 = "0%" y1 = "0%" x2 = "100%" y2 = "0%">
+					<stop stop-color = "#ff0000" offset = "0%"/>
+					<stop stop-color = "#0000ff" offset = "100%"/>
+				</linearGradient>
+			</defs>
+			<rect
+				x="10" y="10"
+				width="100" height="45"
+				fill="url(#lineargradient1)"/>
+		</svg>
+
+		<h2>Example 13: Linear Gradient Fill - UpperLeft to LowerRight</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<defs>
+				<linearGradient id = "lineargradient2" x1 = "0%" y1 = "0%" x2 = "100%" y2 = "100%">
+					<stop stop-color = "#ff0000" offset = "0%"/>
+					<stop stop-color = "#0000ff" offset = "100%"/>
+				</linearGradient>
+			</defs>
+			<rect
+				x="10" y="10"
+				width="100" height="45"
+				fill="url(#lineargradient2)"/>
+		</svg>
+
+		<h2>Example 14: Linear Gradient Fill - controlling position of stops</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<defs>
+				<linearGradient id = "lineargradient3" x1 = "40%" y1 = "40%" x2 = "60%" y2 = "80%">
+					<stop stop-color = "#ff0000" offset = "0%"/>
+					<stop stop-color = "#0000ff" offset = "100%"/>
+				</linearGradient>
+			</defs>
+			<rect
+				x="10" y="10"
+				width="100" height="45"
+				fill="url(#lineargradient3)"/>
+		</svg>
+
+		<h2>Example 15: Linear Gradient Fill - 3 Colors</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<defs>
+				<linearGradient id = "lineargradient4" x1 = "0%" y1 = "0%" x2 = "100%" y2 = "100%">
+					<stop stop-color = "#ff0000" offset = "0%"/>
+					<stop stop-color = "#ffff00" offset = "50%"/>
+					<stop stop-color = "#0000ff" offset = "100%"/>
+				</linearGradient>
+			</defs>
+			<rect
+				x="10" y="10"
+				width="100" height="45"
+				fill="url(#lineargradient4)"/>
+		</svg>
+
+		<h2>Example 16: Gradient Fill - Controlling Transparency at the stops</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<defs>
+				<radialGradient id = "radialgradient2" x1 = "0%" y1 = "0%" x2 = "100%" y2 = "100%">
+					<stop stop-color = "#ff0000" offset = "0%" stop-opacity="100%"/>
+					<stop stop-color = "#ff0000" offset = "100%" stop-opacity="0%"/>
+				</radialGradient>
+			</defs>
+			<rect
+				x="30" y="30"
+				width="100" height="100"
+				fill="#505050"/>
+			<rect
+				x="10" y="10"
+				width="100" height="100"
+				fill="url(#radialgradient2)"/>
+		</svg>
+
+		<h2>Example 17: Stroke Widths and Colors</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<polygon
+				points="30,180 150,20 300,140"
+				stroke="#ff8800" stroke-width="6" fill="none"/>
+		</svg>
+
+		<h2>Example 18: Stroke Line Join- Miter</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<polygon
+				points="30,180 150,20 300,140"
+				stroke="#000000" stroke-width="15" stroke-linejoin="miter"
+				fill="none" />
+		</svg>
+
+		<h2>Example 19: Stroke Line Join - Round</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<polygon
+				points="30,180 150,20 300,140"
+				stroke="#000000" stroke-width="15" stroke-linejoin="round"
+				fill="none" />
+		</svg>
+
+		<h2>Example 20: Stroke Line Join - Bevel</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<polygon
+				points="30,180 150,20 300,140"
+				stroke="#000000" stroke-width="15" stroke-linejoin="bevel"
+				fill="none"/>
+		</svg>
+
+		<h2>Example 21: Stroke Line Join - Dashes 1</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<rect
+				x="10" y="10"
+				width="100" height="45"
+				rx="10" ry="10" stroke="#000000"
+				stroke-width="15" stroke-linejoin="round" stroke-dasharray="1"
+				fill="none" />
+		</svg>
+
+		<h2>Example 22: Stroke Line Join - Dashes 2</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<rect
+				x="10" y="10"
+				width="100" height="45"
+				rx="10" ry="10" stroke="#000000" stroke-width="15" stroke-linejoin="round" stroke-dasharray="2"
+				fill="none" />
+		</svg>
+
+		<h2>Example 23: Stroke Line Join - Dashes 3</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<rect
+				x="10" y="10"
+				width="100" height="45"
+				rx="10" ry="10"
+				stroke="#000000" stroke-width="15" stroke-linejoin="round" stroke-dasharray="3"
+				fill="none" />
+		</svg>
+
+		<h2>Example 24: Stroke Line Join - Dashes 4</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<rect
+				x="10" y="10"
+				width="100" height="45"
+				rx="10" ry="10"
+				stroke="#000000" stroke-width="15" stroke-linejoin="round" stroke-dasharray="3 1 9"
+				fill="none" />
+		</svg>
+
+		<h2>Example 25: Stroke Line Cap - Line Cap Butt , Round, Square</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<line
+				x1="20" y1="10" x2="200" y2="10"
+				stroke="#000000" stroke-width="15" stroke-linecap="butt"/>
+			<line
+				x1="20" y1="30" x2="200" y2="30"
+				stroke="#000000" stroke-width="15" stroke-linecap="round"/>
+			<line
+				x1="20" y1="50" x2="200" y2="50"
+				stroke="#000000" stroke-width="15" stroke-linecap="square"/>
+		</svg>
+
+		<h2>Example 26: Line and Shape Opacity</h2>
+		<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+			<rect
+				x="10" y="10"
+				width="100" height="100"
+				fill="#606060"/>
+			<line
+				x1="20" y1="30" x2="200" y2="30"
+				stroke="#ff0000" stroke-width="15" stroke-opacity="0.5"/>
+			<rect
+				x="50" y="50" width="100" height="100"
+				fill="#ffaa00" fill-opacity="0.7"/>
+		</svg>
+
+	</body>
+</html>
