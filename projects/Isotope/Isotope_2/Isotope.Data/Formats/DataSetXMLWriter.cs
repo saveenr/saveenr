@@ -1,0 +1,3 @@
+namespace Isotope.Data.Formats
+{
+}

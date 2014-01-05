@@ -1,0 +1,18 @@
+import os
+import clr
+
+clr.AddReference ("System.Management")
+import System.Management
+
+
+def wmi_search(searchString):
+    searcher = System.Management.ManagementObjectSearcher(searchString)
+    for wmi_object in searcher.Get():
+        yield wmi_object
+
+for wmi_object in wmi_search( "select * from win32_service" ) :
+    props = [ (prop.Name, prop.Value) for prop in wmi_object.Properties ]
+    prop_dictionary = dict(props)
+    print prop_dictionary
+    
+

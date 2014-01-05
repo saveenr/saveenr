@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DemoWcfService1" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DemoWcfService1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://isotope.redmond.corp.microsoft.com/DemoWCFServices/FolderSyncService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="FolderStatus">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="CreateTime" type="q1:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ItemCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FolderStatus" nillable="true" type="tns:FolderStatus" />
+  <xs:complexType name="ArrayOfFileStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileStatus" nillable="true" type="tns:FileStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFileStatus" nillable="true" type="tns:ArrayOfFileStatus" />
+  <xs:complexType name="FileStatus">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="CreateTimeUtc" type="q2:DateTimeOffset" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="LastModifiedUtc" type="q3:DateTimeOffset" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Size" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileStatus" nillable="true" type="tns:FileStatus" />
+</xs:schema>

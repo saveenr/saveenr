@@ -1,0 +1,16 @@
+import sys
+
+import System
+
+import clr
+#clr.AddReference("System.Diagnostics")
+
+import System.Diagnostics
+	
+if ( __name__=='__main__' ) :
+	print "HELLO"
+	el = System.Diagnostics.EventLog("System")
+	
+	for entry in el.Entries :
+		print entry.Category, entry.Source, entry.EventID, entry.EntryType
+		

@@ -1,0 +1,6 @@
+﻿import clr
+dll=r"E:\DemoIronPythonExpandoInterop\DemoIronPythonExpandoInterop\bin\Debug\DemoIronPythonExpandoInterop.dll"
+clr.AddReferenceToFileAndPath( dll )
+import DemoIronPythonExpandoInterop
+c = DemoIronPythonExpandoInterop.DemoClass()
+

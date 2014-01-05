@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13279FEF-D052-48B9-8285-CCD9678DBD43}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IsotopeTests</RootNamespace>
+    <AssemblyName>IsotopeTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\ArrayUtilTest.cs" />
+    <Compile Include="Cloud\AtomFeedTest.cs" />
+    <Compile Include="Collections\BitArray2DTest.cs" />
+    <Compile Include="Collections\ChunkedListTest.cs" />
+    <Compile Include="IsotopeTestCommon.cs" />
+    <Compile Include="Shell\CommandLineUtilTest.cs" />
+    <Compile Include="Collections\EnumUtilTest.cs" />
+    <Compile Include="Data\DataTableBuilderTest.cs" />
+    <Compile Include="Formats\DirectedGraphTest.cs" />
+    <Compile Include="Layout\BoxHierarchyLayoutTest.cs" />
+    <Compile Include="Clipboard\ClipboardUtilTest.cs" />
+    <Compile Include="Cloud\AdobeKulerTests.cs" />
+    <Compile Include="AnonymousTypeUtilTest.cs" />
+    <Compile Include="Cloud\ColourLoversTests.cs" />
+    <Compile Include="Collections\CollectionUtilTest.cs" />
+    <Compile Include="Interop\COMInteropUtilTest.cs" />
+    <Compile Include="Data\DataUtilTest.cs" />
+    <Compile Include="Graphics\DisplayResolutionTest.cs" />
+    <Compile Include="Collections\EnumerableUtilTest.cs" />
+    <Compile Include="Collections\IEnumerableExtensionsTest.cs" />
+    <Compile Include="DebugExtensions.cs" />
+    <Compile Include="Drawing\LineSegmentTest.cs" />
+    <Compile Include="Math\MathUtilTest.cs" />
+    <Compile Include="NullableOrStringTest.cs" />
+    <Compile Include="OptionalValueTest.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Drawing\RectangleTest.cs" />
+    <Compile Include="Reflection\ReflectionUtilTest.cs" />
+    <Compile Include="Algorithm\SequenceNumberGeneratorTest.cs" />
+    <Compile Include="Formats\SimpleSVGWriterTest.cs" />
+    <Compile Include="Data\TableTest.cs" />
+    <Compile Include="Algorithm\TestAlgorithm.cs" />
+    <Compile Include="Drawing\TestDrawingUtil.cs" />
+    <Compile Include="Shell\TestCmdLineParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestHelper.cs" />
+    <Compile Include="Collections\TestSparseRanges.cs" />
+    <Compile Include="Drawing\TestColorRoundTrip.cs" />
+    <Compile Include="Drawing\TestColors.cs" />
+    <Compile Include="Text\TestStringExtensions.cs" />
+    <Compile Include="Text\TestText.cs" />
+    <Compile Include="Math\TestMathUtil.cs" />
+    <Compile Include="Text\TextUtilTest.cs" />
+    <Compile Include="Trees\TraversalTest.cs" />
+    <Compile Include="Trees\TreeBuilderTest.cs" />
+    <Compile Include="Collections\TwoKeyDictionaryTest.cs" />
+    <Compile Include="Formats\XmlDocWriterInternalTest.cs" />
+    <Compile Include="Xml\XElementExtensionsTest.cs" />
+    <Compile Include="Xml\XmlNodeExtensionsTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AtomFeedSample1.txt" />
+    <None Include="Resources\Customers.xlsx" />
+    <None Include="Resources\TextFile1.txt" />
+    <Content Include="SampleFiles\Atom\Twitter_Search_for_visio.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Test References\Isotope.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Isotope.Colorspace\Isotope.Colorspace\Isotope.Colorspace.csproj">
+      <Project>{61AE4276-825B-480D-A89E-39EB3C326CBC}</Project>
+      <Name>Isotope.Colorspace</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Atom\Isotope.Atom.csproj">
+      <Project>{D23ABD70-6BF6-41F2-835E-841C9522378A}</Project>
+      <Name>Isotope.Atom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Clipboard\Isotope.Clipboard.csproj">
+      <Project>{868CE821-A123-45DC-8FA9-4C106CA40DEA}</Project>
+      <Name>Isotope.Clipboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Cloud\Isotope.Cloud.csproj">
+      <Project>{CC19785B-B745-478B-B55E-A0DB6CECD44F}</Project>
+      <Name>Isotope.Cloud</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Collections\Isotope.Collections.csproj">
+      <Project>{480F63DB-8D1E-4868-A1B0-B351AE6C5635}</Project>
+      <Name>Isotope.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.CommandLine\Isotope.CommandLine.csproj">
+      <Project>{F0F36CF7-4B54-42F2-A0FA-E44314FB0F4D}</Project>
+      <Name>Isotope.CommandLine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Data\Isotope.Data.csproj">
+      <Project>{2166DCD1-4791-46DD-9EC3-3B6A2181034D}</Project>
+      <Name>Isotope.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.DGML\Isotope.DGML.csproj">
+      <Project>{1F0697B7-7E92-48D8-AFA3-DFDD7C05AD58}</Project>
+      <Name>Isotope.DGML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Drawing\Isotope.Drawing.csproj">
+      <Project>{78D05B22-7F62-4D96-8E06-B92DEA29683E}</Project>
+      <Name>Isotope.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Graphics\Isotope.Graphics.csproj">
+      <Project>{976A3FBE-D752-48EF-AA2A-5FAA4DF32807}</Project>
+      <Name>Isotope.Graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Graph\Isotope.Graph.csproj">
+      <Project>{BF9A8A95-05FF-4325-9062-462FDD1BB1DA}</Project>
+      <Name>Isotope.Graph</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.HTML\Isotope.HTML.csproj">
+      <Project>{7FC21050-4884-4F1E-9E47-24D56A8BD108}</Project>
+      <Name>Isotope.HTML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Imaging\Isotope.Imaging.csproj">
+      <Project>{CB44EC40-A597-498A-8433-7AEC6CDB2EFA}</Project>
+      <Name>Isotope.Imaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Interop\Isotope.Interop.csproj">
+      <Project>{FC53DA7B-2F91-4914-AA1D-D160560DBBA0}</Project>
+      <Name>Isotope.Interop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Layout\Isotope.Layout.csproj">
+      <Project>{38C7E047-03AA-4A7F-AF64-727F65D0C21E}</Project>
+      <Name>Isotope.Layout</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Math\Isotope.Math.csproj">
+      <Project>{A7B28619-AEBC-4453-9809-B8FEA33CEEC0}</Project>
+      <Name>Isotope.Math</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Ranges\Isotope.Ranges.csproj">
+      <Project>{BC6FB9EC-CAB2-4BF4-B3E5-94E5C1A56E33}</Project>
+      <Name>Isotope.Ranges</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Reflection\Isotope.Reflection.csproj">
+      <Project>{12B6C5C3-7519-406D-82CB-112CD82ED7F2}</Project>
+      <Name>Isotope.Reflection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.SVG\Isotope.SVG.csproj">
+      <Project>{54A40506-FDF3-4B4E-8C45-3EC9991953CA}</Project>
+      <Name>Isotope.SVG</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Testing\Isotope.Testing.csproj">
+      <Project>{5C1929C2-2050-4386-87CD-AAF247C68521}</Project>
+      <Name>Isotope.Testing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Text\Isotope.Text.csproj">
+      <Project>{B8296141-2932-4D28-8A91-7F69A2CA7CE6}</Project>
+      <Name>Isotope.Text</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Trees\Isotope.Trees.csproj">
+      <Project>{CC5CBB91-3C20-4065-988F-7E4E0973F5EC}</Project>
+      <Name>Isotope.Trees</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Types\Isotope.Types.csproj">
+      <Project>{BB122F15-3036-4551-9062-96103E68807A}</Project>
+      <Name>Isotope.Types</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.UI\Isotope.UI.CommonControls\Isotope.UI.CommonControls.csproj">
+      <Project>{0554A317-2C31-4059-81D8-3F8F95196A94}</Project>
+      <Name>Isotope.UI.CommonControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isotope.Xml\Isotope.Xml.csproj">
+      <Project>{08D87C2D-B478-4FDC-A1EB-41066DC7C7B3}</Project>
+      <Name>Isotope.Xml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

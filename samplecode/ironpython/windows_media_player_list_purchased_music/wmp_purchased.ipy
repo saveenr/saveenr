@@ -1,0 +1,177 @@
+import sys
+import clr
+
+
+
+# History
+# -------
+# 2006-09-21 sorts the files so that more recently acquired files show first
+# 2006-09-21 first find all files and then prints output
+
+
+
+import System
+
+
+
+output_filename = sys.argv[1]
+print "Writing to:", output_filename
+
+clr.AddReferenceToFile( "Interop.WMPLib.dll" )
+from WMPLib import *
+
+wmp = WindowsMediaPlayerClass()
+col = wmp.getAll()
+total_in_collection = col.count
+
+print "Number of items:", col.count
+
+attribs = [ "Title", "Artist", "WM/AlbumTitle", "AcquisitionTime",
+            "Duration" , "Bitrate", "SourceURL" , "Is_Protected" , "MediaType",
+            "ReleaseDate", "WM/TrackNumber" , "WM/Genre"]
+
+exclude_exts = ['.asx','.wpl']
+exclude_count = 0
+#Loop through every item in the collection
+data_files = []
+for i in xrange(total_in_collection):
+
+    # Print a header every 10 items 
+    if ( (( (i+1) % 10) == 0)) :
+        print str(i+1)+"/"+str(total_in_collection)
+
+    # Get the current item
+    item = col.Item[i]
+
+    #collect the data about the item
+    data = {}
+    for attr in attribs :
+        attrib_value = item.getItemInfo( attr )
+        data[attr]=attrib_value
+
+    #identify if the item should be excluded
+    exclude = False
+    if ( len(exclude_exts) ) :
+        ext = System.IO.Path.GetExtension( data["SourceURL"] ).ToLower()
+        if ( ext in exclude_exts ) :
+            exclude = True
+
+    if (not exclude) :
+        if ( data["Is_Protected"]=="" or  data["Is_Protected"]=="False" ) : exclude=True
+        
+    if (exclude) :
+        # skip this one
+        exclude_count += 1
+    else:
+        ds_string = data[ "AcquisitionTime" ] 
+        data[ "AcquisitionTime" ] = System.DateTime.Parse( ds_string )
+        data_files.append( data )
+
+
+fp = file(output_filename,"w")
+data_files.sort( lambda a,b: a["AcquisitionTime" ] < b["AcquisitionTime" ] )
+
+for data in data_files :
+        
+        #emit the data 
+        print >> fp
+
+        #for debugging
+        #for attr in attribs:
+        #    print >> fp, attr+": ", data[attr]
+
+        recommended_filename = data["Title"] + " - " + data["Artist"] + ".mp3"
+
+        print >> fp, "Recommended filename: ", recommended_filename 
+        print >> fp, "Artist: ", data["Artist"]
+        print >> fp, "Album Title: ", data["WM/AlbumTitle"]
+        print >> fp, "Release Date: ", data["ReleaseDate"]
+        print >> fp, "Track Number: ", data["WM/TrackNumber"]
+        print >> fp, "Genre: ", data["WM/Genre"]
+        print >> fp, "Title: ", data["Title"]
+        print >> fp, "Date Added: ", data["AcquisitionTime"]
+
+
+fp.close()
+print "Done."
+print "Total:", total_in_collection 
+print "Handled:", total_in_collection - exclude_count
+print "Skipped:", exclude_count
+print "Excluded Extensions: [", ", ".join(exclude_exts), "]"
+"""
+NOTE: Attributes for media
+
+AcquisitionTime
+AlbumID
+AlbumIDAlbumArtist
+Author
+AverageLevel
+Bitrate
+BuyNow
+BuyTickets
+Copyright
+CurrentBitrate
+Duration
+FileSize
+FileType
+Is_Protected
+IsVBR
+MediaType
+MoreInfo
+PeakValue
+ProviderLogoURL
+ProviderURL
+RecordingTime
+ReleaseDate
+RequestState
+SourceURL
+SyncState
+Title
+TrackingID
+UserCustom1
+UserCustom2
+UserEffectiveRating
+UserLastPlayedTime
+UserPlayCount
+UserPlaycountAfternoon
+UserPlaycountEvening
+UserPlaycountMorning
+UserPlaycountNight
+UserPlaycountWeekday
+UserPlaycountWeekend
+UserRating
+UserServiceRating
+WM/AlbumArtist
+WM/AlbumTitle
+WM/Category
+WM/Composer
+WM/Conductor
+WM/ContentDistributor
+WM/ContentGroupDescription
+WM/EncodingTime
+WM/Genre
+WM/GenreID
+WM/InitialKey
+WM/Language
+WM/Lyrics
+WM/MCDI
+WM/MediaClassPrimaryID
+WM/MediaClassSecondaryID
+WM/Mood
+WM/ParentalRating
+WM/Period
+WM/ProtectionType
+WM/Provider
+WM/ProviderRating
+WM/ProviderStyle
+WM/Publisher
+WM/SubscriptionContentID
+WM/SubTitle
+WM/TrackNumber
+WM/UniqueFileIdentifier
+WM/WMCollectionGroupID
+WM/WMCollectionID
+WM/WMContentID
+WM/Writer
+
+"""

@@ -1,0 +1,32 @@
+namespace Isotope.GraphViz
+{
+    public enum NodeShape
+    {
+        Box,
+        Polygon,
+        Ellipse,
+        Circle,
+        Point,
+        Egg,
+        Triangle,
+        PlainText,
+        Diamond,
+        Trapezium,
+        Parallelogram,
+        House,
+        Hexagon,
+        Septagon,
+        Octogon,
+        DoubleCircle,
+        DoubleOctagon,
+        InvTriangle,
+        Rect,
+        Rectangle,
+        None,
+        Note,
+        Tab,
+        Folder,
+        Box3D,
+        Record
+    }
+}

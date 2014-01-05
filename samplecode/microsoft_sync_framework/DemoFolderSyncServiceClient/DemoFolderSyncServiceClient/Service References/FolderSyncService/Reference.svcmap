@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="26052310-f2e3-45be-8bf2-3765b6ccb0fc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://isotope.redmond.corp.microsoft.com/DemoWCFServices/FolderSyncService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FolderSyncService.wsdl" MetadataType="Wsdl" ID="0211209a-6d6c-4977-9952-dc655ea569cb" SourceId="1" SourceUrl="http://isotope.redmond.corp.microsoft.com/DemoWCFServices/FolderSyncService.svc?wsdl" />
+    <MetadataFile FileName="FolderSyncService.xsd" MetadataType="Schema" ID="1da290e2-1da1-43e3-a292-250484b41a02" SourceId="1" SourceUrl="http://isotope.redmond.corp.microsoft.com/DemoWCFServices/FolderSyncService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FolderSyncService3.xsd" MetadataType="Schema" ID="3686692e-09e3-43e1-96bc-148f96e6fb6f" SourceId="1" SourceUrl="http://isotope.redmond.corp.microsoft.com/DemoWCFServices/FolderSyncService.svc?xsd=xsd4" />
+    <MetadataFile FileName="FolderSyncService31.xsd" MetadataType="Schema" ID="a33bab2f-a1a1-446a-ad15-eb74dafa994e" SourceId="1" SourceUrl="http://isotope.redmond.corp.microsoft.com/DemoWCFServices/FolderSyncService.svc?xsd=xsd3" />
+    <MetadataFile FileName="FolderSyncService2.xsd" MetadataType="Schema" ID="4c3bc2ac-319b-4daf-afe1-8759dc524a2c" SourceId="1" SourceUrl="http://isotope.redmond.corp.microsoft.com/DemoWCFServices/FolderSyncService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FolderSyncService1.xsd" MetadataType="Schema" ID="020a1e83-eb87-417f-925e-70989a8a3527" SourceId="1" SourceUrl="http://isotope.redmond.corp.microsoft.com/DemoWCFServices/FolderSyncService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns:google="http://base.google.com/ns/1.0" xml:lang="en-US" xmlns:openSearch="http://a9.com/-/spec/opensearch/1.1/" xmlns="http://www.w3.org/2005/Atom" xmlns:twitter="http://api.twitter.com/">
+  <id>
+    tag:search.twitter.com,2005:search/visio
+  </id>
+  <link type="text/html" rel="alternate" href="http://search.twitter.com/search?q=visio" />
+  <link type="application/atom+xml" rel="self" href="http://search.twitter.com/search.atom?q=visio" />
+  <title>
+    visio - Twitter Search
+  </title>
+  <link type="application/opensearchdescription+xml" rel="search" href="http://search.twitter.com/opensearch.xml" />
+  <link type="application/atom+xml" rel="refresh" href="http://search.twitter.com/search.atom?q=visio&amp;since_id=2831195604" />
+  <twitter:warning>
+    since_id removed for pagination.
+  </twitter:warning>
+  <updated>2009-07-25T02:48:09Z</updated>
+  <openSearch:itemsPerPage>15</openSearch:itemsPerPage>
+  <link type="application/atom+xml" rel="next" href="http://search.twitter.com/search.atom?max_id=2831195604&amp;page=2&amp;q=visio" />
+  <entry>
+    <id>
+      tag:search.twitter.com,2005:2830481404
+    </id>
+    <published>2009-07-25T02:10:10Z</published>
+    <link type="text/html" rel="alternate" href="http://twitter.com/anon1/statuses/2830481404" />
+    <title>
+      at DLSU giving out a talk on Visio 2003
+    </title>
+    <content type="html">
+      at DLSU giving out a talk on &lt;b&gt;Visio&lt;/b&gt; 2003
+    </content>
+    <updated>2009-07-25T02:10:10Z</updated>
+    <link type="image/png" rel="image" href="http://s3.amazonaws.com/twitter_production/profile_images/57034147/anti-blackcampaignavatar_normal.png" />
+    <twitter:source>
+      &lt;a href="http://www.ping.fm/"&gt;Ping.fm&lt;/a&gt;
+    </twitter:source>
+    <twitter:lang>en</twitter:lang>
+    <author>
+      <name>anon1 (anon1)</name>
+      <uri>
+        http://twitter.com/anon1
+      </uri>
+    </author>
+  </entry>
+  <entry>
+    <id>
+      tag:search.twitter.com,2005:2830298545
+    </id>
+    <published>2009-07-25T01:57:49Z</published>
+    <link type="text/html" rel="alternate" href="http://twitter.com/anon2/statuses/2830298545" />
+    <title>
+      Even visio can't make my diagrams look good. Any VC looking at my business plan just now, would have to laugh. Maybe not my best way forward
+    </title>
+    <content type="html">
+      Even &lt;b&gt;visio&lt;/b&gt; can't make my diagrams look good. Any VC looking at my business plan just now, would have to laugh. Maybe not my best way forward
+    </content>
+    <updated>2009-07-25T01:57:49Z</updated>
+    <link type="image/png" rel="image" href="http://s3.amazonaws.com/twitter_production/profile_images/296993779/IMG_5890_normal.jpg" />
+    <twitter:source>
+      &lt;a href="http://www.tweetdeck.com/"&gt;TweetDeck&lt;/a&gt;
+    </twitter:source>
+    <twitter:lang>en</twitter:lang>
+    <author>
+      <name>anon2 (anon2)</name>
+      <uri>
+        http://twitter.com/anon2
+      </uri>
+    </author>
+  </entry>
+  <entry>
+    <id>
+      tag:search.twitter.com,2005:2830017571
+    </id>
+    <published>2009-07-25T01:38:03Z</published>
+    <link type="text/html" rel="alternate" href="http://twitter.com/anon3/statuses/2830017571" />
+    <title>
+      is tearing myself away from visio to go MH at saint with FLM
+    </title>
+    <content type="html">
+      is tearing myself away from &lt;b&gt;visio&lt;/b&gt; to go MH at saint with FLM
+    </content>
+    <updated>2009-07-25T01:38:03Z</updated>
+    <link type="image/png" rel="image" href="http://s3.amazonaws.com/twitter_production/profile_images/199455821/vegas_normal.jpg" />
+    <twitter:source>
+      &lt;a href="http://twitter.com/"&gt;web&lt;/a&gt;
+    </twitter:source>
+    <twitter:lang>en</twitter:lang>
+    <author>
+      <name>anon3 (anon3)</name>
+      <uri>
+        http://twitter.com/anon3
+      </uri>
+    </author>
+  </entry>
+  <entry>
+    <id>
+      tag:search.twitter.com,2005:2827730004
+    </id>
+    <published>2009-07-24T23:01:29Z</published>
+    <link type="text/html" rel="alternate" href="http://twitter.com/anon4/statuses/2827730004" />
+    <title>
+      even better, an actual deployment style profile for various servers, routers, switches etc with pretty Visio-like graphics?
+    </title>
+    <content type="html">
+      even better, an actual deployment style profile for various servers, routers, switches etc with pretty &lt;b&gt;Visio&lt;/b&gt;-like graphics?
+    </content>
+    <updated>2009-07-24T23:01:29Z</updated>
+    <link type="image/png" rel="image" href="http://s3.amazonaws.com/twitter_production/profile_images/74297079/smr_normal.jpg" />
+    <twitter:source>
+      &lt;a href="http://twitter.com/"&gt;web&lt;/a&gt;
+    </twitter:source>
+    <twitter:lang>en</twitter:lang>
+    <author>
+      <name>anon4 (anon4)</name>
+      <uri>
+        http://twitter.com/anon4
+      </uri>
+    </author>
+  </entry>
+</feed>
