@@ -1,0 +1,69 @@
+
+
+using System;
+using EF = System.Data.Entity;
+
+/*
+
+New .NET 4.5 Console App
+NuGet add 
+	Entity Framework "6.02" or above
+	Entity Framework.SqlServerCompact
+Create Record (set key)
+Create MyDBCOntext with a DBSet of Cities
+Use "DataDirectory" to control location of sdf file
+*/
+
+namespace DenoEF6Compact
+{
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            AppDomain.CurrentDomain.SetData("DataDirectory", @"D:\");
+
+
+            using (var context = new MyDBContext())
+            {
+                System.Console.WriteLine("Adding New Record");
+
+
+                var new_rec = new CreatedOn {Name = System.DateTime.Now.ToString()};
+
+
+                context.MyRecord.Add(new_rec);
+
+
+                context.SaveChanges();
+
+
+                System.Console.WriteLine("Listing");
+
+
+                foreach (var rec in context.MyRecord)
+                {
+                    Console.WriteLine(rec.Name);
+                }
+            }
+
+
+            System.Console.ReadKey();
+        }
+    }
+
+
+    public class CreatedOn
+    {
+        [System.ComponentModel.DataAnnotations.Key]
+        public string Name { get; set; }
+    }
+
+
+    public class MyDBContext : EF.DbContext
+    {
+        public EF.DbSet<CreatedOn> MyRecord { get; set; }
+    }
+}
+
+
+
