@@ -1,0 +1,8 @@
+﻿
+installation instructions
+----------------
+
+- Works only with IIS7
+- Only tested with Windows Server 2008
+
+
