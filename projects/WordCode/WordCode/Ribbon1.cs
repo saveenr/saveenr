@@ -2,42 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Windows.Forms;
-using Microsoft.Office.Interop.Word;
 using Microsoft.Office.Tools.Ribbon;
-
-/*
- Sample text
- * 
-“Helo World”
-it’s
-‘he said’
- * */
+using WORD=Microsoft.Office.Interop.Word;
 
 namespace WordCode
 {
     public partial class Ribbon1
     {
-        private object myReplace = WdReplace.wdReplaceAll;
         private void Ribbon1_Load(object sender, RibbonUIEventArgs e)
         {
 
         }
 
-        private void run_replace(Find find, string src, string dest)
-        {
-            object objMissing = Type.Missing;
-            find.Text = src;
-            find.Replacement.Text = dest;
-            find.Execute(ref objMissing, ref objMissing, ref objMissing, ref objMissing, ref objMissing,
-                ref objMissing, ref objMissing, ref objMissing, ref objMissing, ref objMissing, ref myReplace,
-                ref objMissing, ref objMissing, ref objMissing, ref objMissing);
-        }
-
-        private void button1_Click_1(object sender, RibbonControlEventArgs e)
+        private void button_remove_from_selection_Click(object sender, RibbonControlEventArgs e)
         {
             remove_from_selection();
         }
+
+        private object myReplace =WORD.WdReplace.wdReplaceAll;
 
         private void remove_from_selection()
         {
@@ -57,7 +39,7 @@ namespace WordCode
                 rep.ClearFormatting();
 
                 find.Forward = true;
-                find.Wrap = WdFindWrap.wdFindContinue;
+                find.Wrap = WORD.WdFindWrap.wdFindContinue;
                 find.Format = false;
                 find.MatchCase = false;
                 find.MatchWildcards = false;
@@ -79,14 +61,24 @@ namespace WordCode
             }
         }
 
-        private void buttonRemoveFromDocument_Click(object sender, RibbonControlEventArgs e)
+        private void run_replace(WORD.Find find, string src, string dest)
+        {
+            object objMissing = Type.Missing;
+            find.Text = src;
+            find.Replacement.Text = dest;
+            find.Execute(ref objMissing, ref objMissing, ref objMissing, ref objMissing, ref objMissing,
+                ref objMissing, ref objMissing, ref objMissing, ref objMissing, ref objMissing, ref myReplace,
+                ref objMissing, ref objMissing, ref objMissing, ref objMissing);
+        }
+
+        private void button_remove_from_document_Click(object sender, RibbonControlEventArgs e)
         {
             var app = Globals.ThisAddIn.Application;
 
             app.Selection.WholeStory();
 
             remove_from_selection();
-
         }
+
     }
 }
