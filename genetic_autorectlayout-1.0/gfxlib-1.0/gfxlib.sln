@@ -1,0 +1,62 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gfxlibtest", "gfxlibtest\gfxlibtest.csproj", "{CEE85E9C-E19D-4ED9-BCE6-0F248201DACF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F3FBECBD-C72B-4C7E-BFA7-9406E9A5126E} = {F3FBECBD-C72B-4C7E-BFA7-9406E9A5126E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "treelayout", "treelayout\treelayout.csproj", "{8803D6E1-4666-4BA5-8DF9-89AC770FD94B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "drawxmltree", "drawdirtree\drawxmltree.csproj", "{CBE3A1E4-636A-4A95-BBD9-EB07C4877382}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gfx", "gfx\Gfx.csproj", "{F3FBECBD-C72B-4C7E-BFA7-9406E9A5126E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "svg", "svg\svg.csproj", "{525A38BB-171E-488A-A79B-027667DDE96B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ttftovector", "ttftovector\ttftovector.csproj", "{2534857A-B717-4D7E-9DF8-86242D1DB5AF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{CEE85E9C-E19D-4ED9-BCE6-0F248201DACF}.Debug.ActiveCfg = Debug|.NET
+		{CEE85E9C-E19D-4ED9-BCE6-0F248201DACF}.Debug.Build.0 = Debug|.NET
+		{CEE85E9C-E19D-4ED9-BCE6-0F248201DACF}.Release.ActiveCfg = Release|.NET
+		{CEE85E9C-E19D-4ED9-BCE6-0F248201DACF}.Release.Build.0 = Release|.NET
+		{8803D6E1-4666-4BA5-8DF9-89AC770FD94B}.Debug.ActiveCfg = Debug|.NET
+		{8803D6E1-4666-4BA5-8DF9-89AC770FD94B}.Debug.Build.0 = Debug|.NET
+		{8803D6E1-4666-4BA5-8DF9-89AC770FD94B}.Release.ActiveCfg = Release|.NET
+		{8803D6E1-4666-4BA5-8DF9-89AC770FD94B}.Release.Build.0 = Release|.NET
+		{CBE3A1E4-636A-4A95-BBD9-EB07C4877382}.Debug.ActiveCfg = Debug|.NET
+		{CBE3A1E4-636A-4A95-BBD9-EB07C4877382}.Debug.Build.0 = Debug|.NET
+		{CBE3A1E4-636A-4A95-BBD9-EB07C4877382}.Release.ActiveCfg = Release|.NET
+		{CBE3A1E4-636A-4A95-BBD9-EB07C4877382}.Release.Build.0 = Release|.NET
+		{F3FBECBD-C72B-4C7E-BFA7-9406E9A5126E}.Debug.ActiveCfg = Debug|.NET
+		{F3FBECBD-C72B-4C7E-BFA7-9406E9A5126E}.Debug.Build.0 = Debug|.NET
+		{F3FBECBD-C72B-4C7E-BFA7-9406E9A5126E}.Release.ActiveCfg = Release|.NET
+		{F3FBECBD-C72B-4C7E-BFA7-9406E9A5126E}.Release.Build.0 = Release|.NET
+		{525A38BB-171E-488A-A79B-027667DDE96B}.Debug.ActiveCfg = Debug|.NET
+		{525A38BB-171E-488A-A79B-027667DDE96B}.Debug.Build.0 = Debug|.NET
+		{525A38BB-171E-488A-A79B-027667DDE96B}.Release.ActiveCfg = Release|.NET
+		{525A38BB-171E-488A-A79B-027667DDE96B}.Release.Build.0 = Release|.NET
+		{2534857A-B717-4D7E-9DF8-86242D1DB5AF}.Debug.ActiveCfg = Debug|.NET
+		{2534857A-B717-4D7E-9DF8-86242D1DB5AF}.Debug.Build.0 = Debug|.NET
+		{2534857A-B717-4D7E-9DF8-86242D1DB5AF}.Release.ActiveCfg = Release|.NET
+		{2534857A-B717-4D7E-9DF8-86242D1DB5AF}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

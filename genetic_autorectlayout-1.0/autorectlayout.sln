@@ -1,0 +1,46 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "autorectlayout", "autorectlayout.csproj", "{6C62565E-11C8-4CC1-8D29-59FF2754C3EC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CA4F1C12-EC20-447E-A987-5083B90E7F6D} = {CA4F1C12-EC20-447E-A987-5083B90E7F6D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gfx", "gfxlib-1.0\gfx\Gfx.csproj", "{F3FBECBD-C72B-4C7E-BFA7-9406E9A5126E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "geneticfx", "geneticfx-1.0\geneticfx.csproj", "{CA4F1C12-EC20-447E-A987-5083B90E7F6D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gfxlibtest", "gfxlib-1.0\gfxlibtest\gfxlibtest.csproj", "{CEE85E9C-E19D-4ED9-BCE6-0F248201DACF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{6C62565E-11C8-4CC1-8D29-59FF2754C3EC}.Debug.ActiveCfg = Debug|.NET
+		{6C62565E-11C8-4CC1-8D29-59FF2754C3EC}.Debug.Build.0 = Debug|.NET
+		{6C62565E-11C8-4CC1-8D29-59FF2754C3EC}.Release.ActiveCfg = Release|.NET
+		{6C62565E-11C8-4CC1-8D29-59FF2754C3EC}.Release.Build.0 = Release|.NET
+		{F3FBECBD-C72B-4C7E-BFA7-9406E9A5126E}.Debug.ActiveCfg = Debug|.NET
+		{F3FBECBD-C72B-4C7E-BFA7-9406E9A5126E}.Debug.Build.0 = Debug|.NET
+		{F3FBECBD-C72B-4C7E-BFA7-9406E9A5126E}.Release.ActiveCfg = Release|.NET
+		{F3FBECBD-C72B-4C7E-BFA7-9406E9A5126E}.Release.Build.0 = Release|.NET
+		{CA4F1C12-EC20-447E-A987-5083B90E7F6D}.Debug.ActiveCfg = Debug|.NET
+		{CA4F1C12-EC20-447E-A987-5083B90E7F6D}.Debug.Build.0 = Debug|.NET
+		{CA4F1C12-EC20-447E-A987-5083B90E7F6D}.Release.ActiveCfg = Release|.NET
+		{CA4F1C12-EC20-447E-A987-5083B90E7F6D}.Release.Build.0 = Release|.NET
+		{CEE85E9C-E19D-4ED9-BCE6-0F248201DACF}.Debug.ActiveCfg = Debug|.NET
+		{CEE85E9C-E19D-4ED9-BCE6-0F248201DACF}.Debug.Build.0 = Debug|.NET
+		{CEE85E9C-E19D-4ED9-BCE6-0F248201DACF}.Release.ActiveCfg = Release|.NET
+		{CEE85E9C-E19D-4ED9-BCE6-0F248201DACF}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
