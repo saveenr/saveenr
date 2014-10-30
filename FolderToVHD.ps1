@@ -63,16 +63,21 @@ function folder_to_vhd( $source_folder, $dest_vhd )
 
     $vhd = New-VHD -Path $dest_vhd -Dynamic -SizeBytes $source_size_in_bytes_adjusted
     $vdrive = Mount-VHD -Path $dest_vhd -Passthru
-    $disknumber = $vdrive.Number
-    $disk = Initialize-Disk -Number $disknumber -PartitionStyle MBR -PassThru
-    $x2 = New-Partition -InputObject $disk -UseMaximumSize -AssignDriveLetter:$False -MbrType IFS 
-    $x3 = Format-Volume -Confirm:$false -FileSystem NTFS -force -Partition $x2
-    $partitions = Get-Partition -Volume $x3
-    $part0 = $partitions[0]
-    $x4 = Add-PartitionAccessPath -PartitionNumber $part0.PartitionNumber -AssignDriveLetter -DiskNumber $disknumber -PassThru 
-    $vol = Get-Volume -Partition $part0
+    $disk_number = $vdrive.Number
+    $disk = Initialize-Disk -Number $disk_number -PartitionStyle MBR -PassThru
+    $partition = New-Partition -InputObject $disk -UseMaximumSize -AssignDriveLetter:$False -MbrType IFS 
+    $partition_number = $partition.PartitionNumber 
 
-    Write-Host Drive $vol.DriveLetter Created
+    # Format the Partition
+    Write-Host Formatting Partition $partition_number on Disk $disk_number
+    $object_1 = Format-Volume -Confirm:$false -FileSystem NTFS -force -Partition $partition
+
+    # Assign a Drive letter
+    $x4 = Add-PartitionAccessPath -PartitionNumber $partition_number -AssignDriveLetter -DiskNumber $disk_number -PassThru 
+    
+    # Find the volume for that partition (primarily so we know which driveletter was assigned)
+    $vol = Get-Volume -Partition $partition   
+    Write-Host VHD Mounted as Drive $vol.DriveLetter
 
     # Calculate the destination path within the VHD
     # This will be the name of the source folder
@@ -81,10 +86,11 @@ function folder_to_vhd( $source_folder, $dest_vhd )
     $dest_path = Join-Path $dest_root_path $dest_foldername
 
     # Mirror the contents using the very efficient robocopy tool    
-    robocopy $source_folder $dest_path /mir
+    #robocopy $source_folder $dest_path /mir
 
     # Now unmount that disk
-    Dismount-VHD -DiskNumber $disknumber
+    Write-Host Detaching the VHD
+    Dismount-VHD -DiskNumber $disk_number
 }
 
 
