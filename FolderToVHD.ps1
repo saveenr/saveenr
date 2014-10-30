@@ -65,15 +65,12 @@ function folder_to_vhd( $source_folder, $dest_vhd )
     $vdrive = Mount-VHD -Path $dest_vhd -Passthru
     $disk_number = $vdrive.Number
     $disk = Initialize-Disk -Number $disk_number -PartitionStyle MBR -PassThru
-    $partition = New-Partition -InputObject $disk -UseMaximumSize -AssignDriveLetter:$False -MbrType IFS 
+    $partition = New-Partition -InputObject $disk -UseMaximumSize -AssignDriveLetter -MbrType IFS 
     $partition_number = $partition.PartitionNumber 
 
     # Format the Partition
     Write-Host Formatting Partition $partition_number on Disk $disk_number
     $object_1 = Format-Volume -Confirm:$false -FileSystem NTFS -force -Partition $partition
-
-    # Assign a Drive letter
-    $x4 = Add-PartitionAccessPath -PartitionNumber $partition_number -AssignDriveLetter -DiskNumber $disk_number -PassThru 
     
     # Find the volume for that partition (primarily so we know which driveletter was assigned)
     $vol = Get-Volume -Partition $partition   
