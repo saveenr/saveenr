@@ -39,19 +39,20 @@ function folder_to_vhd( $source_folder, $dest_vhd )
     }
 
     # Find out the exact number of bytes of the source folder
-    # NOTE: sure how if accounts for hidden items
+    # NOTE: -Force will included hidden files
 
-    $stats = Get-ChildItem $source_folder | Measure-Object -Sum Length
+    $stats = Get-ChildItem $source_folder -Force | Measure-Object -Sum Length
     $source_size_in_bytes = $stats.Sum
+
+    Write-Host Total size of folder on disk $source_size_in_bytes
 
     # Calcualte the VHD size in bytes
     # NOTE: incorporating some padding and to align the size on some byte boundary
     $blocksize = [int32] 512
-    $padding = 100MB
-    $source_size_in_bytes_adjusted = $source_size_in_bytes + $padding
-    $source_size_in_bytes_adjusted = $source_size_in_bytes_adjusted/$blocksize
-    $source_size_in_bytes_adjusted = [int64] $source_size_in_bytes_adjusted
-    $source_size_in_bytes_adjusted = $source_size_in_bytes_adjusted*$blocksize
+    $padding = [int64] ( ($source_size_in_bytes * 0.1) + 100MB ) # Make the drive a little bigger than we need
+    Write-Host Extra Padding in bytes = $padding
+    $source_size_in_bytes_adjusted = [int64] ($source_size_in_bytes + $padding)
+    $source_size_in_bytes_adjusted = ( [int64]($source_size_in_bytes_adjusted/$blocksize))*$blocksize
 
     # Verify that handling the byte boundary was done correctly
     $remainder = $source_size_in_bytes_adjusted % $blocksize
@@ -65,6 +66,9 @@ function folder_to_vhd( $source_folder, $dest_vhd )
     $vdrive = Mount-VHD -Path $dest_vhd -Passthru
     $disk_number = $vdrive.Number
     $disk = Initialize-Disk -Number $disk_number -PartitionStyle MBR -PassThru
+
+    # Create the Partition
+    Write-Host Creating the Partition
     $partition = New-Partition -InputObject $disk -UseMaximumSize -AssignDriveLetter -MbrType IFS 
     $partition_number = $partition.PartitionNumber 
 
@@ -74,19 +78,21 @@ function folder_to_vhd( $source_folder, $dest_vhd )
     
     # Find the volume for that partition (primarily so we know which driveletter was assigned)
     $vol = Get-Volume -Partition $partition   
-    Write-Host VHD Mounted as Drive $vol.DriveLetter
+    $drive_letter = $vol.DriveLetter
+    $drive_name = $drive_letter + ":"
+    Write-Host VHD Mounted as Drive $drive_letter
 
     # Calculate the destination path within the VHD
     # This will be the name of the source folder
-    $dest_root_path = $vol.DriveLetter + ":\"
+    $dest_root_path = $drive_letter + ":\"
     $dest_foldername = Split-Path $source_folder -Leaf
     $dest_path = Join-Path $dest_root_path $dest_foldername
 
     # Mirror the contents using the very efficient robocopy tool    
-    #robocopy $source_folder $dest_path /mir
+    robocopy $source_folder $dest_path /mir
 
     # Now unmount that disk
-    Write-Host Detaching the VHD
+    Write-Host Detaching the VHD Drive $drive_name
     Dismount-VHD -DiskNumber $disk_number
 }
 
