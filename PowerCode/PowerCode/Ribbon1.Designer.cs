@@ -41,9 +41,12 @@
             this.button_selection = this.Factory.CreateRibbonButton();
             this.button_slide = this.Factory.CreateRibbonButton();
             this.button_doc = this.Factory.CreateRibbonButton();
+            this.group2 = this.Factory.CreateRibbonGroup();
+            this.button_fit_to_slide = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.tab_powercode.SuspendLayout();
             this.group_fixquotes.SuspendLayout();
+            this.group2.SuspendLayout();
             // 
             // tab1
             // 
@@ -60,6 +63,7 @@
             // tab_powercode
             // 
             this.tab_powercode.Groups.Add(this.group_fixquotes);
+            this.tab_powercode.Groups.Add(this.group2);
             this.tab_powercode.Label = "Code";
             this.tab_powercode.Name = "tab_powercode";
             // 
@@ -68,7 +72,7 @@
             this.group_fixquotes.Items.Add(this.button_selection);
             this.group_fixquotes.Items.Add(this.button_slide);
             this.group_fixquotes.Items.Add(this.button_doc);
-            this.group_fixquotes.Label = "group2";
+            this.group_fixquotes.Label = "Fix Quotes";
             this.group_fixquotes.Name = "group_fixquotes";
             // 
             // button_selection
@@ -89,6 +93,18 @@
             this.button_doc.Name = "button_doc";
             this.button_doc.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button_doc_Click);
             // 
+            // group2
+            // 
+            this.group2.Items.Add(this.button_fit_to_slide);
+            this.group2.Label = "Resize Image";
+            this.group2.Name = "group2";
+            // 
+            // button_fit_to_slide
+            // 
+            this.button_fit_to_slide.Label = "Fit to slide";
+            this.button_fit_to_slide.Name = "button_fit_to_slide";
+            this.button_fit_to_slide.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button_fit_to_slide_Click);
+            // 
             // Ribbon1
             // 
             this.Name = "Ribbon1";
@@ -102,6 +118,8 @@
             this.tab_powercode.PerformLayout();
             this.group_fixquotes.ResumeLayout(false);
             this.group_fixquotes.PerformLayout();
+            this.group2.ResumeLayout(false);
+            this.group2.PerformLayout();
 
         }
 
@@ -114,6 +132,8 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton button_selection;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton button_slide;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton button_doc;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup group2;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton button_fit_to_slide;
     }
 
     partial class ThisRibbonCollection

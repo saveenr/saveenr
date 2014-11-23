@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
+using Microsoft.Office.Core;
 using Microsoft.Office.Tools.Ribbon;
 using PP=Microsoft.Office.Interop.PowerPoint;
 
@@ -21,7 +24,7 @@ namespace PowerCode
             var pres = app.ActivePresentation;
             var wnd = app.ActiveWindow;
             var view = wnd.View;
-            PP.Slide slide = view.Slide;
+            PP.Slide slide = (PP.Slide) view.Slide;
 
             fix_quotes_slide(slide);
         }
@@ -41,7 +44,7 @@ namespace PowerCode
             var pres = app.ActivePresentation;
             var wnd = app.ActiveWindow;
             var view = wnd.View;
-            PP.Slide slide = view.Slide;
+            PP.Slide slide = (PP.Slide ) view.Slide;
 
             PP.AutoCorrect ac = app.AutoCorrect;
             fix_quotes_slide(slide);
@@ -92,6 +95,42 @@ namespace PowerCode
 
                 
             }
+        }
+
+        private void button_fit_to_slide_Click(object sender, RibbonControlEventArgs e)
+        {
+            var app = Globals.ThisAddIn.Application;
+
+            var pres = app.ActivePresentation;
+            var wnd = app.ActiveWindow;
+            var view = wnd.View;
+            
+            var sel = wnd.Selection;
+            if (sel == null)
+            {
+                MessageBox.Show("Nothing selected; selection null");
+                return;
+            }
+
+            if (sel.Type == PP.PpSelectionType.ppSelectionNone)
+            {
+                MessageBox.Show("Nothing selected; selection type null");
+                return;
+            }
+
+            var width = pres.PageSetup.SlideWidth;
+
+            if (sel.Type == PP.PpSelectionType.ppSelectionShapes)
+            {
+                foreach (PP.Shape shape in sel.ShapeRange)
+                {
+                    if (shape.Type == MsoShapeType.msoPicture)
+                    {
+                        shape.Width = width;
+                    }                    
+                }
+            }
+
         }
 
     }
