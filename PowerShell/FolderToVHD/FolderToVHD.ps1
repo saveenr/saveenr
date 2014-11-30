@@ -1,8 +1,28 @@
-﻿Set-StrictMode -Version 2
+﻿# FolderToVHD.ps1
+#
+# Description: Creates a VHD From a Folder
+# Author: Saveen Reddy
+#
+
+param(
+  [Parameter(Mandatory=$true)] [string]$Folder,
+  [Parameter(Mandatory=$true)] [string]$VHD
+)
+
+Set-StrictMode -Version 2
 $ErrorActionPreference = "Stop"
+
+If (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(`
+    [Security.Principal.WindowsBuiltInRole] "Administrator"))
+{
+    Write-Warning "You do not have Administrator rights to run this script!`nPlease re-run this script as an Administrator!"
+    Break
+}
 
 function folder_to_vhd( $source_folder, $dest_vhd )
 {
+    Write-Host FROM $source_folder
+    Write-Host   TO $dest_vhd
     if (!(Test-Path $source_folder))
     {
         Write-Host ERROR: Source Folder Does Not exist
@@ -41,7 +61,13 @@ function folder_to_vhd( $source_folder, $dest_vhd )
     # Find out the exact number of bytes of the source folder
     # NOTE: -Force will included hidden files
 
-    $stats = Get-ChildItem $source_folder -Force | Measure-Object -Sum Length
+    $childitems = Get-ChildItem $source_folder -Force 
+    if ($childitems -eq $null)
+    {
+        Write-Error "No Items in Source Folder"
+    }
+    Write-Host $childitems.GetType()
+    $stats = $childitems  | Measure-Object -Sum Length
     $source_size_in_bytes = $stats.Sum
 
     Write-Host Total size of folder on disk $source_size_in_bytes
@@ -97,10 +123,4 @@ function folder_to_vhd( $source_folder, $dest_vhd )
 }
 
 
-
-$src_fldr = "D:\workfolder\canon-eos-20d"
-$dest_fldr =  "D:\"
-$basename = Split-Path $src_fldr -Leaf
-$dest_vhd = Join-Path $dest_fldr ($basename + ".vhd" )
-
-folder_to_vhd $src_fldr $dest_vhd
+folder_to_vhd $Folder $VHD
