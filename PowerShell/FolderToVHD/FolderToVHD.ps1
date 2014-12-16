@@ -61,12 +61,15 @@ function folder_to_vhd( $source_folder, $dest_vhd )
     # Find out the exact number of bytes of the source folder
     # NOTE: -Force will included hidden files
 
-    $childitems = Get-ChildItem $source_folder -Force 
+    $childitems = dir $source_folder -Force -File -Recurse
     if ($childitems -eq $null)
     {
         Write-Error "No Items in Source Folder"
+        exit
     }
-    Write-Host $childitems.GetType()
+
+    #Write-Host $childitems.GetType()
+
     $stats = $childitems  | Measure-Object -Sum Length
     $source_size_in_bytes = $stats.Sum
 
