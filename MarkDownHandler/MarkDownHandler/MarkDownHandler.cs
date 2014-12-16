@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace MarkDownHandler
 {
-
-
     public class MarkDownHandler : System.Web.IHttpHandler
     {
         public bool IsReusable
@@ -21,15 +18,17 @@ namespace MarkDownHandler
 
             const string html_content_type = "text/html";
 
-            var md = new MarkdownDotNET.Markdown();
+
 
             string input_file = context.Request.PhysicalPath;
             string input_text_markdown = System.IO.File.ReadAllText(input_file);
-            string output_text_html = md.Transform(input_text_markdown);
+
+
+            var settings = new CommonMark.CommonMarkSettings();
+            string output_text_html = CommonMark.CommonMarkConverter.Convert(input_text_markdown, settings);
 
             string title = System.IO.Path.GetFileNameWithoutExtension(input_file);
-
-
+            
 
             context.Response.ContentType = html_content_type;
 
