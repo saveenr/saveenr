@@ -12,13 +12,14 @@ namespace NiceNumbers
         {
             test_file_sizes();
             test_beers();
+            test_durations();
         }
 
         private static void test_file_sizes()
         {
             var units = new string[] {"", "KB", "MB", "GB", "TB", "PB", "EB", "ZB"};
 
-            var p = new Prettyfier(1000.0, units);
+            var p = new NUmericPrettyfier(1000.0, units);
 
             AssertEquals("-1", p.Prettify("-1"));
             AssertEquals("-1", p.Prettify("-1.001"));
@@ -51,7 +52,7 @@ namespace NiceNumbers
         {
             var units = new string[] { "", "K", "M", "G", "T", "P", "E", "Z" };
 
-            var p = new Prettyfier(1000.0, units);
+            var p = new NUmericPrettyfier(1000.0, units);
 
             AssertEquals("10.3 T", p.Prettify("10,328,109,349,120"));
             AssertEquals("0", p.Prettify("0"));
@@ -63,6 +64,24 @@ namespace NiceNumbers
             AssertEquals("1.05 M", p.Prettify("1,048,576"));
         }
 
+        private static void test_durations()
+        {
+            var units = new string[] { "s", "m", "h", "d" };
+
+            var p = new TimeSpanPrettyfier(units);
+
+            AssertEquals("0 s", p.Prettify(new TimeSpan(0,0,0,0)));
+            AssertEquals("1 s", p.Prettify(new TimeSpan(0, 0, 0, 1)));
+            AssertEquals("59 s", p.Prettify(new TimeSpan(0, 0, 0, 59)));
+            AssertEquals("1 m", p.Prettify(new TimeSpan(0, 0, 0, 60)));
+            AssertEquals("1.5 m", p.Prettify(new TimeSpan(0, 0, 0, 60+30)));
+            AssertEquals("1.75 m", p.Prettify(new TimeSpan(0, 0, 0, 60 + 30 + 15)));
+            AssertEquals("2 m", p.Prettify(new TimeSpan(0, 0, 0, 60 + 60 )));
+            AssertEquals("59 m", p.Prettify(new TimeSpan(0, 0, 0, 60 * 59 )));
+            AssertEquals("1 h", p.Prettify(new TimeSpan(0, 0, 0, 60 * 60)));
+            AssertEquals("23 h", p.Prettify(new TimeSpan(0, 0, 0, 60 * 60 * 23)));
+            AssertEquals("1 d", p.Prettify(new TimeSpan(0, 0, 0, 60 * 60 * 24)));
+        }
 
         public static void AssertEquals(string desired, string actual)
         {
@@ -75,22 +94,23 @@ namespace NiceNumbers
     }
 
 
-    public class Prettyfier
+    public class NUmericPrettyfier
     {
         public double Base;
         public string[] Units;
 
-        public Prettyfier(double basev, string [] units)
+        public NUmericPrettyfier(double basev, string[] units)
         {
             this.Base = basev;
             this.Units = units;
         }
 
+
         public string Prettify(string v)
         {
             v = v.Replace(",","");
             double d = double.Parse(v);
-            return Prettify(d);
+            return this.Prettify(d);
         }
 
         public string Prettify(double value)
@@ -146,15 +166,40 @@ namespace NiceNumbers
         }
     }
 
-    public class PrettyResult
+    public class TimeSpanPrettyfier
     {
-        public double OriginalValue;
-        public double PrettyValue;
-        public int LowerLog;
+        public string[] Units;
 
-        public PrettyResult()
+        public TimeSpanPrettyfier(string[] units)
         {
+            this.Units = units;
+        }
 
+        public string Prettify(string v)
+        {
+            var d = System.TimeSpan.Parse(v);
+            return this.Prettify(d);
+        }
+
+        public string Prettify(TimeSpan d)
+        {
+            if (d.TotalSeconds < 60)
+            {
+                return string.Format("{0:G2} {1}", d.TotalSeconds, this.Units[0]);
+            }
+
+            if (d.TotalMinutes < 60)
+            {
+                return string.Format("{0:G3} {1}", d.TotalMinutes, this.Units[1]);
+            }
+
+            if (d.TotalHours < 24)
+            {
+                return string.Format("{0:G3} {1}", d.TotalHours,this.Units[2]);
+            }
+
+            return string.Format("{0:G3} {1}", d.TotalDays, this.Units[3]);
         }
     }
+
 }
