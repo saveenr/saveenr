@@ -66,11 +66,15 @@ namespace NiceNumbers
 
         private static void test_durations()
         {
-            var units = new string[] { "s", "m", "h", "d" };
+            var units = new string[] { "ms", "s", "m", "h", "d" , "y"};
 
             var p = new TimeSpanPrettyfier(units);
 
             AssertEquals("0 s", p.Prettify(new TimeSpan(0,0,0,0)));
+            AssertEquals("1 ms", p.Prettify(new TimeSpan(0, 0, 0, 0,1)));
+            AssertEquals("500 ms", p.Prettify(new TimeSpan(0, 0, 0, 0, 500)));
+            AssertEquals("999 ms", p.Prettify(new TimeSpan(0, 0, 0, 0, 999)));
+            AssertEquals("1 s", p.Prettify(new TimeSpan(0, 0, 0, 0, 1000)));
             AssertEquals("1 s", p.Prettify(new TimeSpan(0, 0, 0, 1)));
             AssertEquals("59 s", p.Prettify(new TimeSpan(0, 0, 0, 59)));
             AssertEquals("1 m", p.Prettify(new TimeSpan(0, 0, 0, 60)));
@@ -81,6 +85,9 @@ namespace NiceNumbers
             AssertEquals("1 h", p.Prettify(new TimeSpan(0, 0, 0, 60 * 60)));
             AssertEquals("23 h", p.Prettify(new TimeSpan(0, 0, 0, 60 * 60 * 23)));
             AssertEquals("1 d", p.Prettify(new TimeSpan(0, 0, 0, 60 * 60 * 24)));
+            AssertEquals("365 d", p.Prettify(new TimeSpan(0, 0, 0, 60 * 60 * 24 * 365)));
+            AssertEquals("1 y", p.Prettify(new TimeSpan(0, 0, 0, 60 * 60 * 24 * 366)));
+            AssertEquals("1.5 y", p.Prettify(new TimeSpan(0, 0, 0, 60 * 60 * 24 * (365 + 182))));
         }
 
         public static void AssertEquals(string desired, string actual)
@@ -183,22 +190,39 @@ namespace NiceNumbers
 
         public string Prettify(TimeSpan d)
         {
+            if (d.TotalMilliseconds == 0)
+            {
+                return string.Format("0 {0}", this.Units[1]);
+            }
+
+            if (d.TotalMilliseconds <= 999)
+            {
+                return string.Format("{0} {1}", (int) d.TotalMilliseconds, this.Units[0]);                
+            }
+
             if (d.TotalSeconds < 60)
             {
-                return string.Format("{0:G2} {1}", d.TotalSeconds, this.Units[0]);
+                return string.Format("{0:G2} {1}", d.TotalSeconds, this.Units[1]);
             }
 
             if (d.TotalMinutes < 60)
             {
-                return string.Format("{0:G3} {1}", d.TotalMinutes, this.Units[1]);
+                return string.Format("{0:G3} {1}", d.TotalMinutes, this.Units[2]);
             }
 
             if (d.TotalHours < 24)
             {
-                return string.Format("{0:G3} {1}", d.TotalHours,this.Units[2]);
+                return string.Format("{0:G3} {1}", d.TotalHours,this.Units[3]);
             }
 
-            return string.Format("{0:G3} {1}", d.TotalDays, this.Units[3]);
+            if (d.TotalDays < 365.25)
+            {
+                return string.Format("{0:G3} {1}", d.TotalDays, this.Units[4]);                
+            }
+
+            return string.Format("{0:G3} {1}", (d.TotalDays/365.25), this.Units[5]);                
+
+
         }
     }
 
