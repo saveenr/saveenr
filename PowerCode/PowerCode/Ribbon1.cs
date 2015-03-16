@@ -24,7 +24,7 @@ namespace PowerCode
             var pres = app.ActivePresentation;
             var wnd = app.ActiveWindow;
             var view = wnd.View;
-            PP.Slide slide = (PP.Slide) view.Slide;
+            var slide = (PP.Slide) view.Slide;
 
             fix_quotes_slide(slide);
         }
@@ -44,9 +44,9 @@ namespace PowerCode
             var pres = app.ActivePresentation;
             var wnd = app.ActiveWindow;
             var view = wnd.View;
-            PP.Slide slide = (PP.Slide ) view.Slide;
+            var slide = (PP.Slide ) view.Slide;
 
-            PP.AutoCorrect ac = app.AutoCorrect;
+            var ac = app.AutoCorrect;
             fix_quotes_slide(slide);
 
         }
@@ -97,14 +97,24 @@ namespace PowerCode
             }
         }
 
-        private void button_fit_to_slide_Click(object sender, RibbonControlEventArgs e)
+        private void button_fit_to_slide_width_Click(object sender, RibbonControlEventArgs e)
+        {
+            ResizeImageToFit(ResizeType.Width);
+        }
+
+        public enum ResizeType
+        {
+            Width, Height
+        }
+
+        private static void ResizeImageToFit(ResizeType rt)
         {
             var app = Globals.ThisAddIn.Application;
 
             var pres = app.ActivePresentation;
             var wnd = app.ActiveWindow;
             var view = wnd.View;
-            
+
             var sel = wnd.Selection;
             if (sel == null)
             {
@@ -118,7 +128,9 @@ namespace PowerCode
                 return;
             }
 
-            var width = pres.PageSetup.SlideWidth;
+            var pagesetup = pres.PageSetup;
+            var slide_width = pagesetup.SlideWidth;
+            var slide_height = pagesetup.SlideHeight;
 
             if (sel.Type == PP.PpSelectionType.ppSelectionShapes)
             {
@@ -126,11 +138,22 @@ namespace PowerCode
                 {
                     if (shape.Type == MsoShapeType.msoPicture)
                     {
-                        shape.Width = width;
-                    }                    
+                        if (rt == ResizeType.Width)
+                        {
+                            shape.Width = slide_width;                            
+                        }
+                        else if (rt == ResizeType.Height)
+                        {
+                            shape.Height = slide_height;                                                        
+                        }
+                    }
                 }
             }
+        }
 
+        private void button_fit_to_slide_height_Click(object sender, RibbonControlEventArgs e)
+        {
+            ResizeImageToFit(ResizeType.Height);
         }
 
     }

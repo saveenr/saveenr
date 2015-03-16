@@ -42,7 +42,8 @@
             this.button_slide = this.Factory.CreateRibbonButton();
             this.button_doc = this.Factory.CreateRibbonButton();
             this.group2 = this.Factory.CreateRibbonGroup();
-            this.button_fit_to_slide = this.Factory.CreateRibbonButton();
+            this.button_fit_to_slide_width = this.Factory.CreateRibbonButton();
+            this.button_fit_to_slide_height = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.tab_powercode.SuspendLayout();
             this.group_fixquotes.SuspendLayout();
@@ -95,15 +96,22 @@
             // 
             // group2
             // 
-            this.group2.Items.Add(this.button_fit_to_slide);
+            this.group2.Items.Add(this.button_fit_to_slide_width);
+            this.group2.Items.Add(this.button_fit_to_slide_height);
             this.group2.Label = "Resize Image";
             this.group2.Name = "group2";
             // 
-            // button_fit_to_slide
+            // button_fit_to_slide_width
             // 
-            this.button_fit_to_slide.Label = "Fit to slide";
-            this.button_fit_to_slide.Name = "button_fit_to_slide";
-            this.button_fit_to_slide.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button_fit_to_slide_Click);
+            this.button_fit_to_slide_width.Label = "Fit to slide width";
+            this.button_fit_to_slide_width.Name = "button_fit_to_slide_width";
+            this.button_fit_to_slide_width.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button_fit_to_slide_width_Click);
+            // 
+            // button_fit_to_slide_height
+            // 
+            this.button_fit_to_slide_height.Label = "Fit to slide height";
+            this.button_fit_to_slide_height.Name = "button_fit_to_slide_height";
+            this.button_fit_to_slide_height.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button_fit_to_slide_height_Click);
             // 
             // Ribbon1
             // 
@@ -133,7 +141,8 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton button_slide;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton button_doc;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group2;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton button_fit_to_slide;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton button_fit_to_slide_width;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton button_fit_to_slide_height;
     }
 
     partial class ThisRibbonCollection
