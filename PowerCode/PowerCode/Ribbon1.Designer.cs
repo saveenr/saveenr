@@ -64,7 +64,7 @@
             // 
             this.tab_powercode.Groups.Add(this.group_fixquotes);
             this.tab_powercode.Groups.Add(this.group2);
-            this.tab_powercode.Label = "Code";
+            this.tab_powercode.Label = "DevDoc";
             this.tab_powercode.Name = "tab_powercode";
             // 
             // group_fixquotes

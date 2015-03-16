@@ -59,7 +59,7 @@
             // tab_WordCode
             // 
             this.tab_WordCode.Groups.Add(this.group_fix_quotes);
-            this.tab_WordCode.Label = "Code";
+            this.tab_WordCode.Label = "DevDoc";
             this.tab_WordCode.Name = "tab_WordCode";
             // 
             // group_fix_quotes

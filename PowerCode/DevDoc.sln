@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerCode", "PowerCode\PowerCode.csproj", "{ED649A3B-C477-408B-A53A-15EC4FF4FF44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevDocForPowerPoint", "PowerCode\DevDocForPowerPoint.csproj", "{ED649A3B-C477-408B-A53A-15EC4FF4FF44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCode", "WordCode\WordCode.csproj", "{965EF0D8-2DB0-40E5-9A47-9A9B8ACD5B58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevDocForWord", "WordCode\DevDocForWord.csproj", "{965EF0D8-2DB0-40E5-9A47-9A9B8ACD5B58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
