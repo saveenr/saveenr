@@ -107,7 +107,7 @@ namespace PowerCode
             Width, Height
         }
 
-        private static void ResizeImageToFit(ResizeType rt)
+        private void ResizeImageToFit(ResizeType rt)
         {
             var app = Globals.ThisAddIn.Application;
 
@@ -138,6 +138,9 @@ namespace PowerCode
                 {
                     if (shape.Type == MsoShapeType.msoPicture)
                     {
+
+                        
+
                         if (rt == ResizeType.Width)
                         {
                             shape.Width = slide_width;                            
@@ -145,6 +148,15 @@ namespace PowerCode
                         else if (rt == ResizeType.Height)
                         {
                             shape.Height = slide_height;                                                        
+                        }
+
+                        if (this.checkBox_auto_center.Checked)
+                        {
+                            var picwidth = shape.Width;
+                            var picheight = shape.Height;
+
+                            shape.Left = (slide_width / 2) - (picwidth/ 2);
+                            shape.Top = (slide_height/ 2) - (picheight / 2);
                         }
                     }
                 }

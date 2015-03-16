@@ -44,6 +44,7 @@
             this.group2 = this.Factory.CreateRibbonGroup();
             this.button_fit_to_slide_width = this.Factory.CreateRibbonButton();
             this.button_fit_to_slide_height = this.Factory.CreateRibbonButton();
+            this.checkBox_auto_center = this.Factory.CreateRibbonCheckBox();
             this.tab1.SuspendLayout();
             this.tab_powercode.SuspendLayout();
             this.group_fixquotes.SuspendLayout();
@@ -98,6 +99,7 @@
             // 
             this.group2.Items.Add(this.button_fit_to_slide_width);
             this.group2.Items.Add(this.button_fit_to_slide_height);
+            this.group2.Items.Add(this.checkBox_auto_center);
             this.group2.Label = "Resize Image";
             this.group2.Name = "group2";
             // 
@@ -112,6 +114,12 @@
             this.button_fit_to_slide_height.Label = "Fit to slide height";
             this.button_fit_to_slide_height.Name = "button_fit_to_slide_height";
             this.button_fit_to_slide_height.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button_fit_to_slide_height_Click);
+            // 
+            // checkBox_auto_center
+            // 
+            this.checkBox_auto_center.Checked = true;
+            this.checkBox_auto_center.Label = "Auto Center";
+            this.checkBox_auto_center.Name = "checkBox_auto_center";
             // 
             // Ribbon1
             // 
@@ -143,6 +151,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group2;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton button_fit_to_slide_width;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton button_fit_to_slide_height;
+        internal Microsoft.Office.Tools.Ribbon.RibbonCheckBox checkBox_auto_center;
     }
 
     partial class ThisRibbonCollection
