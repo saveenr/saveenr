@@ -1,0 +1,6 @@
+D:\NiceNumbers\NiceNumbers\NiceNumbers\bin\Debug\NiceNumbers.exe.config
+D:\NiceNumbers\NiceNumbers\NiceNumbers\bin\Debug\NiceNumbers.exe
+D:\NiceNumbers\NiceNumbers\NiceNumbers\bin\Debug\NiceNumbers.pdb
+D:\NiceNumbers\NiceNumbers\NiceNumbers\obj\Debug\NiceNumbers.csprojResolveAssemblyReference.cache
+D:\NiceNumbers\NiceNumbers\NiceNumbers\obj\Debug\NiceNumbers.exe
+D:\NiceNumbers\NiceNumbers\NiceNumbers\obj\Debug\NiceNumbers.pdb
