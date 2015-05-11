@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace DemoSystem.ThreadingTaskWinForm
 {
-    public partial class Form1 : Form
+    public partial class FormTask : Form
     {
         private System.Threading.Tasks.Task<int> task;
 
-        public Form1()
+        public FormTask()
         {
             InitializeComponent();
         }
@@ -36,11 +36,10 @@ namespace DemoSystem.ThreadingTaskWinForm
             this.update_ui("Start Clicked");
 
             cTokenSource = new System.Threading.CancellationTokenSource();
-            System.Threading.CancellationToken cToken = cTokenSource.Token;
+            var cToken = cTokenSource.Token;
 
             task = System.Threading.Tasks.Task<int>.Factory
-                .StartNew(
-                        () => GenerateNumbers(cToken), cToken)
+                .StartNew( () => this.GenerateNumbers(cToken), cToken)
                 .ContinueWith( t =>
                                    {
                                        this.ts_updateui("TASK: ContinueWith: DONE");
@@ -48,7 +47,7 @@ namespace DemoSystem.ThreadingTaskWinForm
                                    })
                 ;
 
-            cToken.Register(() => cancelNotification());
+            cToken.Register(FormTask.cancelNotification);
         }
 
         private void buttonStop_Click(object sender, EventArgs e)

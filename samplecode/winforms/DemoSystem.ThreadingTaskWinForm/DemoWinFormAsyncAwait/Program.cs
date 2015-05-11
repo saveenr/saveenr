@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DemoSystem.ThreadingTaskWinForm
+namespace DemoWinFormAsyncAwait
 {
     static class Program
     {
@@ -15,7 +16,7 @@ namespace DemoSystem.ThreadingTaskWinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTask());
+            Application.Run(new FormAsyncAwait());
         }
     }
 }
