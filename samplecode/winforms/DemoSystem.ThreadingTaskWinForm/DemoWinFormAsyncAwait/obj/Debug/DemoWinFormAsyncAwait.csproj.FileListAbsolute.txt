@@ -7,3 +7,12 @@ E:\code\github\saveenr\samplecode\winforms\DemoSystem.ThreadingTaskWinForm\DemoW
 E:\code\github\saveenr\samplecode\winforms\DemoSystem.ThreadingTaskWinForm\DemoWinFormAsyncAwait\obj\Debug\DemoWinFormAsyncAwait.csproj.GenerateResource.Cache
 E:\code\github\saveenr\samplecode\winforms\DemoSystem.ThreadingTaskWinForm\DemoWinFormAsyncAwait\obj\Debug\DemoWinFormAsyncAwait.exe
 E:\code\github\saveenr\samplecode\winforms\DemoSystem.ThreadingTaskWinForm\DemoWinFormAsyncAwait\obj\Debug\DemoWinFormAsyncAwait.pdb
+D:\DemoSystem.ThreadingTaskWinForm\DemoWinFormAsyncAwait\bin\Debug\DemoWinFormAsyncAwait.exe.config
+D:\DemoSystem.ThreadingTaskWinForm\DemoWinFormAsyncAwait\obj\Debug\DemoWinFormAsyncAwait.exe
+D:\DemoSystem.ThreadingTaskWinForm\DemoWinFormAsyncAwait\obj\Debug\DemoWinFormAsyncAwait.pdb
+D:\DemoSystem.ThreadingTaskWinForm\DemoWinFormAsyncAwait\bin\Debug\DemoWinFormAsyncAwait.exe
+D:\DemoSystem.ThreadingTaskWinForm\DemoWinFormAsyncAwait\bin\Debug\DemoWinFormAsyncAwait.pdb
+D:\DemoSystem.ThreadingTaskWinForm\DemoWinFormAsyncAwait\obj\Debug\DemoWinFormAsyncAwait.csprojResolveAssemblyReference.cache
+D:\DemoSystem.ThreadingTaskWinForm\DemoWinFormAsyncAwait\obj\Debug\DemoWinFormAsyncAwait.FormAsyncAwait.resources
+D:\DemoSystem.ThreadingTaskWinForm\DemoWinFormAsyncAwait\obj\Debug\DemoWinFormAsyncAwait.Properties.Resources.resources
+D:\DemoSystem.ThreadingTaskWinForm\DemoWinFormAsyncAwait\obj\Debug\DemoWinFormAsyncAwait.csproj.GenerateResource.Cache
