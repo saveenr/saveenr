@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{31F3A084-CFD7-407F-BCFE-C651C22EDF96}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Viziblr.WebCharting</RootNamespace>
+    <AssemblyName>Viziblr.WebCharting</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Colors.cs" />
+    <Compile Include="Data\BaseDataSet.cs" />
+    <Compile Include="Data\DataHelper.cs" />
+    <Compile Include="MarkerStyle.cs" />
+    <Compile Include="MSChartUtil.cs" />
+    <Compile Include="Templates\BarChartMulti.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BarStyle.cs" />
+    <Compile Include="Data\DataSetMultiSeries.cs" />
+    <Compile Include="Data\DataSetSingleSeries.cs" />
+    <Compile Include="GradientStyle.cs" />
+    <Compile Include="Data\DataPoint.cs" />
+    <Compile Include="DemoData.cs" />
+    <Compile Include="FontFormat.cs" />
+    <Compile Include="Templates\BarChart.cs" />
+    <Compile Include="Extensions\ChartExt.cs" />
+    <Compile Include="LineFormat.cs" />
+    <Compile Include="MarkerFormat.cs" />
+    <Compile Include="Templates\BaseAxis.cs" />
+    <Compile Include="Templates\BaseBarChart.cs" />
+    <Compile Include="Templates\CategoryAxis.cs" />
+    <Compile Include="Templates\StackedAreaChart.cs" />
+    <Compile Include="Templates\BaseTemplate.cs" />
+    <Compile Include="Templates\BaseLineChart.cs" />
+    <Compile Include="Templates\ControlChart.cs" />
+    <Compile Include="Templates\LineChart.cs" />
+    <Compile Include="Templates\LineChartMulti.cs" />
+    <Compile Include="Templates\RadialChart.cs" />
+    <Compile Include="Templates\StackedBarChart.cs" />
+    <Compile Include="Templates\ValueAxis.cs" />
+    <Compile Include="Templates\XYChart.cs" />
+    <Compile Include="TileFormat.cs" />
+    <Compile Include="LegendPosition.cs" />
+    <Compile Include="LineStyle.cs" />
+    <Compile Include="Palette.cs" />
+    <Compile Include="PaletteBuilder.cs" />
+    <Compile Include="PaletteItem.cs" />
+    <Compile Include="PaletteType.cs" />
+    <Compile Include="RadialStyle.cs" />
+    <Compile Include="Data\SeriesList.cs" />
+    <Compile Include="Data\SeriesDataPoints.cs" />
+    <Compile Include="Data\AxisLabels.cs" />
+    <Compile Include="Swatches.cs" />
+    <Compile Include="TileStyle.cs" />
+    <Compile Include="ToolTip.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Libraries\Viziblr.Colorspace\Viziblr.Colorspace.csproj">
+      <Project>{61AE4276-825B-480D-A89E-39EB3C326CBC}</Project>
+      <Name>Viziblr.Colorspace</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

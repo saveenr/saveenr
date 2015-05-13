@@ -1,0 +1,87 @@
+
+<project name="RIFCOnverter" default="build" >
+
+	<include buildfile="../../tools/pixeldepot.build" />
+
+	<property name="nant.settings.currentframework" value="net-1.1"/>
+	<property name="appname" value="rifconverter8.3.3"/>
+
+	<property name="build.dir" value="${build.root.dir}/${appname}"/>
+	<property name="build.src.dir" value="${build.dir}/src"/>
+	<property name="build.setup.dir" value="${build.dir}/setup"/>
+
+
+        <target name="build" description="compiles the source code">
+
+
+            <delete dir="${build.dir}" failonerror="False" />
+
+	    <solution solutionfile="src/rifconverter.sln" configuration="Debug" outputdir="${build.dir}\bin"  />
+	    <exec basedir="c:\python23\"
+			program="python.exe"
+			commandline="${saveenrtools.path}\vsclean.py"
+			workingdir="."
+			>
+	    </exec>
+
+
+            <echo>build directory</echo>
+            <mkdir dir="${build.dir}" />
+            <mkdir dir="${build.src.dir}" />
+            <mkdir dir="${build.setup.dir}" />
+
+            <copy todir="${build.src.dir}">
+                <fileset basedir="src">
+                    <includes name="**" />
+                    <excludes name="*.ncb" />
+                    <excludes name="*.incr" />
+                    <excludes name="*.pdb" />
+                </fileset>
+            </copy>
+
+
+            <copy todir="${build.dir}\bin">
+                <fileset basedir="doc">
+                    <includes name="**" />
+                </fileset>
+            </copy>
+
+            <copy todir="${build.setup.dir}">
+                <fileset basedir="src/setup/debug">
+                    <includes name="**" />
+                    <excludes name="*.ncb" />
+                </fileset>
+            </copy>
+
+		<copy file="rifconverter.iss" todir="${build.dir}"/>
+
+            <echo>-------------------------</echo>
+
+
+	    <exec basedir="${saveenrtools.path}\innosetup4"
+			program="iscc.exe"
+			commandline="rifconverter.iss"
+			workingdir="${build.dir}"
+			>
+	    </exec>
+
+
+
+
+            <zip zipfile="${build.dir}\${appname}-src.zip">
+                <fileset basedir="${build.src.dir}">
+                    <includes name="**.*"/>
+				</fileset>
+            </zip>
+
+
+            <zip zipfile="${build.dir}\${appname}-setup.zip">
+                <fileset basedir="${build.dir}\Output">
+                    <includes name="**.*"/>
+				</fileset>
+            </zip>
+
+        </target>
+
+</project>
+

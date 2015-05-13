@@ -1,0 +1,46 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rifconverterapp", "rifconverterapp\rifconverterapp.csproj", "{4E46263D-EA01-46D0-8CF7-0E0356A6C6A0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D6EF8ABE-1609-4E42-8184-D72284935474} = {D6EF8ABE-1609-4E42-8184-D72284935474}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAutomation", "win32auto\WindowsAutomation.csproj", "{FBF8B1FE-E99F-4505-9909-2CBBE5502B49}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PainterAutomation", "painter8automation\PainterAutomation.csproj", "{408E552D-8FC3-4A25-A92C-BAD40238213A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppBarForm", "AppBarForm\AppBarForm.csproj", "{D6EF8ABE-1609-4E42-8184-D72284935474}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{4E46263D-EA01-46D0-8CF7-0E0356A6C6A0}.Debug.ActiveCfg = Debug|.NET
+		{4E46263D-EA01-46D0-8CF7-0E0356A6C6A0}.Debug.Build.0 = Debug|.NET
+		{4E46263D-EA01-46D0-8CF7-0E0356A6C6A0}.Release.ActiveCfg = Release|.NET
+		{4E46263D-EA01-46D0-8CF7-0E0356A6C6A0}.Release.Build.0 = Release|.NET
+		{FBF8B1FE-E99F-4505-9909-2CBBE5502B49}.Debug.ActiveCfg = Debug|.NET
+		{FBF8B1FE-E99F-4505-9909-2CBBE5502B49}.Debug.Build.0 = Debug|.NET
+		{FBF8B1FE-E99F-4505-9909-2CBBE5502B49}.Release.ActiveCfg = Release|.NET
+		{FBF8B1FE-E99F-4505-9909-2CBBE5502B49}.Release.Build.0 = Release|.NET
+		{408E552D-8FC3-4A25-A92C-BAD40238213A}.Debug.ActiveCfg = Debug|.NET
+		{408E552D-8FC3-4A25-A92C-BAD40238213A}.Debug.Build.0 = Debug|.NET
+		{408E552D-8FC3-4A25-A92C-BAD40238213A}.Release.ActiveCfg = Release|.NET
+		{408E552D-8FC3-4A25-A92C-BAD40238213A}.Release.Build.0 = Release|.NET
+		{D6EF8ABE-1609-4E42-8184-D72284935474}.Debug.ActiveCfg = Debug|.NET
+		{D6EF8ABE-1609-4E42-8184-D72284935474}.Debug.Build.0 = Debug|.NET
+		{D6EF8ABE-1609-4E42-8184-D72284935474}.Release.ActiveCfg = Release|.NET
+		{D6EF8ABE-1609-4E42-8184-D72284935474}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

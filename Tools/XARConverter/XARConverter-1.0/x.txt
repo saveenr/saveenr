@@ -1,0 +1,548 @@
+WindowTool
+ 006309d8 "WindowsForms10.Window.8.app3" "depotbar 0.1.4 (D:\pixeldepot on OLYMPUS)" 00000000 
+   00890a18 "WindowsForms10.BUTTON.app3" "Search" 00000000 
+   00980a4c "WindowsForms10.EDIT.app3" "" 00000000 
+   002e0a42 "WindowsForms10.STATIC.app3" "Python" 00000000 
+   004709ca "WindowsForms10.STATIC.app3" "Browse" 00000000 
+   00420a0e "WindowsForms10.BUTTON.app3" "scripts" 00000000 
+   007d0988 "WindowsForms10.BUTTON.app3" "cmd" 00000000 
+ 00020056 "Shell_TrayWnd" "" 00000000 
+   00100088 "DV2ControlHost" "Start Menu" 00020056 
+     0010009e "Desktop User Pane" "" 00000000 
+     001000a6 "DesktopSFTBarHost" "" 00000000 
+       001000a8 "SysListView32" "" 00000000 
+         0010009c "SysHeader32" "" 00000000 
+     00100090 "Desktop More Programs Pane" "" 00000000 
+       0010009a "Button" "All &Programs" 00000000 
+     00110036 "DesktopSFTBarHost" "" 00000000 
+       001000a2 "SysListView32" "" 00000000 
+         0010008e "SysHeader32" "" 00000000 
+     002c0292 "DesktopLogoffPane" "" 00000000 
+   0004002a "Button" "Start" 00000000 
+   00030042 "TrayNotifyWnd" "" 00000000 
+     00030044 "TrayClockWClass" "11:23 PM" 00000000 
+     00030046 "SysPager" "" 00000000 
+     00030048 "Button" "" 00000000 
+   00030054 "ReBarWindow32" "" 00000000 
+     00010082 "WMP9DeskBand" "WMP9DeskBand" 00000000 
+       01cf05ba "WMP9ActiveXHost122294984" "WMP9ActiveXHost122294984" 00000000 
+         0177060c "ATL:0B8AF282" "" 00000000 
+     0001007a "MSTaskSwWClass" "Running Applications" 00000000 
+ 00c40bea "WindowsForms10.Window.8.app.0.b7ab7b" "XARConverter1.0.0" 00000000 
+   00880b12 "WindowsForms10.STATIC.app.0.b7ab7b" "Show Debug Trace" 00000000 
+   00340ae0 "WindowsForms10.STATIC.app.0.b7ab7b" "RIFCoverter will not overwrite files that already exist." 00000000 
+   00270b06 "WindowsForms10.STATIC.app.0.b7ab7b" "Step 4: Do the conversion" 00000000 
+   007a0adc "WindowsForms10.BUTTON.app.0.b7ab7b" "Browse" 00000000 
+   02680ada "WindowsForms10.BUTTON.app.0.b7ab7b" "Browse" 00000000 
+   028c0ad4 "WindowsForms10.STATIC.app.0.b7ab7b" "Step 3: What kind of conversion?" 00000000 
+   00a70acc "WindowsForms10.STATIC.app.0.b7ab7b" "RIFConverter website" 00000000 
+   010e0aca "WindowsForms10.STATIC.app.0.b7ab7b" "Time:" 00000000 
+   00b50ac4 "WindowsForms10.STATIC.app.0.b7ab7b" "00:00:02" 00000000 
+   01dd0ac2 "WindowsForms10.STATIC.app.0.b7ab7b" "Not Running
+N/A
+N/A
+N/A" 00000000 
+   00440ac0 "WindowsForms10.STATIC.app.0.b7ab7b" "Step 2: Where to put the output files?" 00000000 
+   005f0abe "WindowsForms10.STATIC.app.0.b7ab7b" "Log:" 00000000 
+   00440ba6 "WindowsForms10.RichEdit20W.app.0.b7ab7b" "" 00000000 
+   01020abc "WindowsForms10.BUTTON.app.0.b7ab7b" "Stop" 00000000 
+   00280ab4 "WindowsForms10.BUTTON.app.0.b7ab7b" "Include Subfolders" 00000000 
+   014e0ab2 "WindowsForms10.BUTTON.app.0.b7ab7b" "Start" 00000000 
+   003c0aaa "WindowsForms10.STATIC.app.0.b7ab7b" "Status:" 00000000 
+   00420bba "WindowsForms10.STATIC.app.0.b7ab7b" "Step 1: Where are XAR RIF files?" 00000000 
+   010a0b92 "WindowsForms10.EDIT.app.0.b7ab7b" "D:\output-folder" 00000000 
+   00630ab8 "WindowsForms10.EDIT.app.0.b7ab7b" "D:\saveenr\Creative" 00000000 
+ 003e0d7a "ConsoleWindowClass" "C:\WINDOWS\system32\cmd.exe - windowtool.py  list " 00000000 
+ 00071096 "Afx:400000:8:10011:0:2d0f3e" "PythonWin - [windowtool.py]" 00000000 
+   00181010 "MDIClient" "" 00000000 
+     000410ba "Afx:400000:b:10011:6:3b107e" "windowtool.py" 00000000 
+       001110e2 "AfxMDIFrame42" "" 00000000 
+         0009106c "AfxMDIFrame42" "" 00000000 
+           00041040 "Scintilla" "" 00000000 
+           000510d0 "Scintilla" "" 00000000 
+         000410c2 "SysTreeView32" "" 00000000 
+     000910e6 "Afx:400000:b:10011:6:910a2" "Interactive Window" 00000000 
+       002210d2 "Scintilla" "" 00000000 
+   00081050 "msctls_statusbar32" "" 00000000 
+   00121034 "AfxControlBar42" "Debugger" 00000000 
+   0013104e "AfxControlBar42" "" 00000000 
+   00121016 "AfxControlBar42" "" 00000000 
+   0008103e "AfxControlBar42" "" 00000000 
+ 00270e68 "CabinetWClass" "D:\pixeldepot\tools" 00000000 
+   00140fa2 "msctls_statusbar32" "" 00000000 
+   000b0fb4 "SHELLDLL_DefView" "" 00000000 
+     005d0f3c "SysListView32" "FolderView" 00000000 
+       001c0eea "SysHeader32" "" 00000000 
+ 006c0742 "Afx:1000000:8:10011:0:919f5" "Xara X - [internet-content-1.xar]" 00000000 
+   00470d38 "#32770" "TIFF Export Bitmap Options" 006c0742 
+     01ad0cb4 "ComboBox" "" 00000000 
+     00af0c56 "ComboBox" "" 00000000 
+       00ea0c9c "Edit" "" 00000000 
+     00350c42 "Button" "Bitmap size and &resolution" 00000000 
+     00720c74 "Edit" "" 00000000 
+     00750d22 "Edit" "" 00000000 
+     00ca0d00 "Button" "Area to save" 00000000 
+     00740c54 "Button" "S&pread" 00000000 
+     00970c62 "Button" "&Drawing" 00000000 
+     00c70c2c "Button" "&Selection" 00000000 
+     00930d3a "Button" "Color depth (&Bits per pixel)" 00000000 
+     001f0d4a "Button" "CMYK" 00000000 
+     00a20cc4 "Button" "32" 00000000 
+     01240ca6 "Button" "24" 00000000 
+     003a0cb8 "Button" "8" 00000000 
+     04a30d16 "Button" "4" 00000000 
+     001a0d50 "Button" "1" 00000000 
+     00e70cc0 "Button" "&Compression" 00000000 
+     01410cae "Button" "RLE" 00000000 
+     00e00d1e "Button" "RGB" 00000000 
+     00810c10 "Button" "Export" 00000000 
+     03c40cce "Button" "Cancel" 00000000 
+     006c0c50 "Button" "&Help" 00000000 
+     007c0c1a "Button" "Ba&ckground" 00000000 
+     00410d64 "Button" "Export type" 00000000 
+     001c0dd2 "Button" "&Interlaced" 00000000 
+     00230dba "Button" "&Transparent" 00000000 
+     01370e50 "Button" "&Palette" 00000000 
+     002d0dfc "Button" "Browser" 00000000 
+     00720d8e "Button" "Optimized" 00000000 
+     00390e42 "Button" "&Dithering" 00000000 
+     00570d60 "Button" "None" 00000000 
+     01600ea6 "Button" "Ordered" 00000000 
+     00300e72 "Button" "Error diffusion" 00000000 
+     00100e78 "Button" "&Animation" 00000000 
+     00510dea "Edit" "" 00000000 
+     00120e52 "Edit" "" 00000000 
+     00180e10 "ComboBox" "" 00000000 
+     001e0df6 "Button" "Loop Continously" 00000000 
+     002d0ea0 "Edit" "" 00000000 
+     00170e5a "Button" "Add system colors" 00000000 
+     00230d80 "Button" "Number of colors in palette" 00000000 
+   006b06f0 "Afx:1000000:0" "" 006c0742 
+   00a306f2 "MDIClient" "" 00000000 
+     002b0c46 "Afx:1000000:8:10011:6:919f5" "internet-content-1.xar" 00000000 
+       005b0cb0 "Afx:1000000:8" "" 00000000 
+         04770cc6 "Afx:1000000:1028" "" 00000000 
+         00450cc8 "Afx:1000000:1003:10011:0:0" "" 00000000 
+           00700caa "Button" "" 00000000 
+           007d0c22 "Button" "" 00000000 
+           00150cb6 "Afx:1000000:1003:10011:0:0" "" 00000000 
+         004e0cea "Afx:1000000:1003:10011:0:0" "" 00000000 
+           00170cb2 "Button" "" 00000000 
+           001b0cee "Button" "" 00000000 
+           009c0c9a "Afx:1000000:1003:10011:0:0" "" 00000000 
+         03280c8c "Afx:1000000:b:0:1:0" "" 00000000 
+         006c0d1c "AfxWnd42s" "Afx:1000000:8" 00000000 
+         00400c34 "AfxWnd42s" "Afx:1000000:8" 00000000 
+           00e80d44 "AfxWnd42s" "Afx:1000000:8" 00000000 
+         003c0d3e "AfxWnd42s" "Afx:1000000:8" 00000000 
+   010e07da "msctls_statusbar32" "" 00000000 
+   00c906d0 "Afx:1000000:8:0:10:0" "" 00000000 
+   013f0700 "AfxWnd42s" "" 00000000 
+     00fa07d6 "AfxWnd42s" "Selector tool infobar" 00000000 
+       00080808 "cc_BitmapButton" "BUTTONSTRIP2.87" 00000000 
+       00d40822 "cc_BitmapButton" "BUTTONSTRIP2.18" 00000000 
+       00100906 "cc_BitmapButton" "BUTTONSTRIP2.14" 00000000 
+       000a0832 "cc_BitmapButton" "BUTTONSTRIP2.13" 00000000 
+       0059089a "cc_SmallButton" "SMALLBUTTONSTRIP.3" 00000000 
+       00170856 "cc_SmallButton" "SMALLBUTTONSTRIP.2" 00000000 
+       005d08e6 "cc_SmallButton" "SMALLBUTTONSTRIP.1" 00000000 
+       017708a2 "cc_SmallButton" "SMALLBUTTONSTRIP.0" 00000000 
+       00b608aa "cc_StaticBitmap" "SHEAR" 00000000 
+       0102084c "cc_StaticBitmap" "ROTATE" 00000000 
+       008908e0 "cc_SmallButton" "SMALLBUTTONSTRIP.4" 00000000 
+       005e094a "cc_StaticBitmap" "BRACKET" 00000000 
+       00dd08b8 "cc_SmallButton" "SMALLBUTTONSTRIP.3" 00000000 
+       00570802 "cc_SmallButton" "SMALLBUTTONSTRIP.2" 00000000 
+       00730934 "cc_SmallButton" "SMALLBUTTONSTRIP.1" 00000000 
+       008108ec "cc_SmallButton" "SMALLBUTTONSTRIP.0" 00000000 
+       00c608d4 "cc_StaticBitmap" "WHTEXT" 00000000 
+       0019081e "cc_SmallButton" "SMALLBUTTONSTRIP.3" 00000000 
+       00e7087c "cc_SmallButton" "SMALLBUTTONSTRIP.2" 00000000 
+       005b08ce "cc_SmallButton" "SMALLBUTTONSTRIP.1" 00000000 
+       0201090a "cc_SmallButton" "SMALLBUTTONSTRIP.0" 00000000 
+       003b0936 "cc_StaticBitmap" "XYTEXT" 00000000 
+       00530930 "cc_BitmapButton" "BUTTONSTRIP2.10" 00000000 
+       027c092e "cc_BitmapButton" "BUTTONSTRIP2.8" 00000000 
+       00af092a "cc_BitmapButton" "BUTTONSTRIP2.7" 00000000 
+       00d1074c "cc_BitmapButton" "BUTTONSTRIP2.6" 00000000 
+       00f40932 "cc_Grid" "Grid Control" 00000000 
+       00d60946 "Edit" "" 00000000 
+       03eb0924 "Edit" "" 00000000 
+       014908fc "Edit" "" 00000000 
+       016c0804 "Edit" "" 00000000 
+       00ac090e "Edit" "" 00000000 
+       01ba085e "Edit" "" 00000000 
+       00d708a6 "Edit" "" 00000000 
+       01ba088a "Edit" "" 00000000 
+     004006ac "AfxWnd42s" "Galleries" 00000000 
+       00e707a4 "cc_BitmapButton" "BUTTONSTRIP2.74" 00000000 
+       00c6079a "cc_BitmapButton" "BUTTONSTRIP.39" 00000000 
+       009506b6 "cc_BitmapButton" "BUTTONSTRIP.38" 00000000 
+       00cd06de "cc_BitmapButton" "BUTTONSTRIP2.64" 00000000 
+       02d40706 "cc_BitmapButton" "BUTTONSTRIP2.63" 00000000 
+       00aa0782 "cc_BitmapButton" "BUTTONSTRIP2.53" 00000000 
+       0138072a "cc_BitmapButton" "BUTTONSTRIP2.71" 00000000 
+       033007ca "cc_BitmapButton" "BUTTONSTRIP2.52" 00000000 
+       00c306aa "cc_BitmapButton" "BUTTONSTRIP.35" 00000000 
+     003007cc "AfxWnd42s" "Standard" 00000000 
+       007006dc "ComboBox" "" 00000000 
+         007906cc "Edit" "" 00000000 
+       024d071c "ComboBox" "" 00000000 
+         016f06f8 "Edit" "" 00000000 
+       00f806c2 "cc_BitmapButton" "BUTTONSTRIP2.35" 00000000 
+       008006f4 "cc_BitmapButton" "BUTTONSTRIP.30" 00000000 
+       00ba06f6 "cc_BitmapButton" "BUTTONSTRIP.31" 00000000 
+       01050732 "cc_BitmapButton" "BUTTONSTRIP.12" 00000000 
+       0110073a "cc_BitmapButton" "BUTTONSTRIP.11" 00000000 
+       00bc073e "cc_BitmapButton" "BUTTONSTRIP2.0" 00000000 
+       01270744 "cc_BitmapButton" "BUTTONSTRIP.3" 00000000 
+       01ce0748 "cc_BitmapButton" "BUTTONSTRIP.2" 00000000 
+       00b1077a "cc_BitmapButton" "BUTTONSTRIP.75" 00000000 
+       014e0786 "cc_BitmapButton" "BUTTONSTRIP.1" 00000000 
+       00ba06c6 "cc_Slider" "Quality Slider" 00000000 
+     010b07d2 "AfxWnd42s" "Feathering" 00000000 
+       00db07d0 "cc_BitmapButton" "BUTTONSTRIP2.89" 00000000 
+       02660766 "cc_Slider" "" 00000000 
+       065e0760 "Edit" "" 00000000 
+   01570776 "AfxWnd42s" "" 00000000 
+   00d4075e "AfxWnd42s" "" 00000000 
+     00ee06be "AfxWnd42s" "Toolbar" 00000000 
+       015407d8 "cc_BitmapButton" "ZOOMTOOLBMP" 00000000 
+       00cc07e0 "cc_BitmapButton" "PUSHTOOLBMP" 00000000 
+       00fd07e6 "cc_BitmapButton" "SLICETOOLBMP" 00000000 
+       005e07e8 "cc_BitmapButton" "MOULDTOOLBMP" 00000000 
+       01c907fc "cc_BitmapButton" "BLENDTOOLBMP" 00000000 
+       002907ae "cc_BitmapButton" "CONTOURTOOLBMP" 00000000 
+       003206ee "cc_BitmapButton" "BEVELTOOLBMP" 00000000 
+       002c0702 "cc_BitmapButton" "SOFTSHADOWTOOLBMP" 00000000 
+       00ae077e "cc_BitmapButton" "TRANSPTOOLBMP" 00000000 
+       048b07aa "cc_BitmapButton" "GRADTOOLBMP" 00000000 
+       0045074a "cc_BitmapButton" "TEXTTOOLBMP" 00000000 
+       004807fe "cc_BitmapButton" "REGSHAPETOOLBMP" 00000000 
+       008c073c "cc_BitmapButton" "ELIPTOOLBMP" 00000000 
+       01530716 "cc_BitmapButton" "RECTTOOLBMP" 00000000 
+       013f0728 "cc_BitmapButton" "PENTOOLBMP" 00000000 
+       01550736 "cc_BitmapButton" "BEZTOOLBMP" 00000000 
+       007a07f6 "cc_BitmapButton" "FHANDTOOLBMP" 00000000 
+       009b07dc "cc_BitmapButton" "SELRTOOLBMP" 00000000 
+   01d20734 "AfxWnd42s" "" 00000000 
+ 00300aac "CabinetWClass" "F:\media\comedy\phil-hendrie\november" 00000000 
+   00700c18 "msctls_statusbar32" "" 00000000 
+   00400c6c "SHELLDLL_DefView" "" 00000000 
+     00320d0a "SysListView32" "FolderView" 00000000 
+       00160c6a "SysHeader32" "" 00000000 
+ 009f012c "CabinetWClass" "D:\pixeldepot\saveenr\XARConverter-1.0\src" 00000000 
+   0102026e "msctls_statusbar32" "" 00000000 
+   00ee0264 "SHELLDLL_DefView" "" 00000000 
+     005a01d2 "SysListView32" "FolderView" 00000000 
+       007d01b0 "SysHeader32" "" 00000000 
+ 0116017e "wndclass_desked_gsk" "xarconverter (Running) - Microsoft Development Environment" 00000000 
+   0056095a "VBFloatingPalette" "" 0116017e 
+   00400a78 "VBFloatingPalette" "" 0116017e 
+   01de0970 "VBFloatingPalette" "" 0116017e 
+   00740a16 "VBFloatingPalette" "" 0116017e 
+   0041099a "VBFloatingPalette" "" 0116017e 
+   001309da "VBFloatingPalette" "" 0116017e 
+   00410a66 "VBFloatingPalette" "" 0116017e 
+   003a09f0 "VBFloatingPalette" "" 0116017e 
+   006d0a1e "VBFloatingPalette" "" 0116017e 
+   01a30a94 "VBFloatingPalette" "" 0116017e 
+   00540a40 "VBFloatingPalette" "" 0116017e 
+   009a0a64 "VBFloatingPalette" "" 0116017e 
+   01150964 "VBFloatingPalette" "" 0116017e 
+   00e60980 "VBFloatingPalette" "" 0116017e 
+   01f70a34 "VBFloatingPalette" "" 0116017e 
+   018a0a58 "VBFloatingPalette" "" 0116017e 
+   009109aa "VBFloatingPalette" "" 0116017e 
+   003a0966 "VBFloatingPalette" "" 0116017e 
+   008909a8 "VBFloatingPalette" "" 0116017e 
+   010b0976 "VBFloatingPalette" "" 0116017e 
+   005b0a6c "VBFloatingPalette" "" 0116017e 
+   006b09de "VBFloatingPalette" "" 0116017e 
+   023b0a54 "VBFloatingPalette" "" 0116017e 
+   019109c0 "VBFloatingPalette" "" 0116017e 
+   01140956 "VBFloatingPalette" "" 0116017e 
+   00b3097e "VBFloatingPalette" "" 0116017e 
+   00e80958 "VBFloatingPalette" "" 0116017e 
+   002e0962 "VBFloatingPalette" "" 0116017e 
+   016a0978 "VBFloatingPalette" "" 0116017e 
+   01c80998 "VBFloatingPalette" "" 0116017e 
+   00f1096e "VBFloatingPalette" "" 0116017e 
+   023909b2 "VBFloatingPalette" "" 0116017e 
+   0213095e "VBFloatingPalette" "" 0116017e 
+   01200960 "VBFloatingPalette" "" 0116017e 
+   007605fc "VBFloatingPalette" "" 0116017e 
+   0076056e "VBFloatingPalette" "" 0116017e 
+   00b00600 "VBFloatingPalette" "" 0116017e 
+   008e0692 "VBFloatingPalette" "" 0116017e 
+   010505e6 "VBFloatingPalette" "" 0116017e 
+   005d05d2 "VBFloatingPalette" "" 0116017e 
+   01020604 "VBFloatingPalette" "" 0116017e 
+   00db061c "VBFloatingPalette" "" 0116017e 
+   00cb0558 "VBFloatingPalette" "" 0116017e 
+   00ac06a2 "VBFloatingPalette" "" 0116017e 
+   00ee069c "VBFloatingPalette" "" 0116017e 
+   00ce0698 "VBFloatingPalette" "" 0116017e 
+   00e40690 "VBFloatingPalette" "" 0116017e 
+   0189065e "VBFloatingPalette" "" 0116017e 
+   007d065a "VBFloatingPalette" "" 0116017e 
+   00580652 "VBFloatingPalette" "" 0116017e 
+   004d0610 "VBFloatingPalette" "" 0116017e 
+   01e50596 "VBFloatingPalette" "" 0116017e 
+   00cf05c2 "VBFloatingPalette" "" 0116017e 
+   01b50354 "OfficeTooltip" "0 Warnings" 0116017e 
+   0117049c "TBToolboxTip" "" 0116017e 
+   008f0554 "MsoCommandBarShadow" "&Refactor" 0116017e 
+   00ab04d8 "MsoCommandBarShadow" "&Refactor" 0116017e 
+   00b10406 "MsoCommandBarPopup" "&Window" 0116017e 
+   0520044e "MsoCommandBarPopup" "&Window" 0116017e 
+   04c7042c "MsoCommandBarShadow" "&Window" 0116017e 
+   003c04fc "MsoCommandBarShadow" "&Window" 0116017e 
+   00640526 "MsoCommandBarShadow" "&Window" 0116017e 
+   002103b0 "MsoCommandBarDock" "MsoDockLeft" 00000000 
+   005703f0 "MsoCommandBarDock" "MsoDockRight" 00000000 
+   003e0362 "MsoCommandBarDock" "MsoDockTop" 00000000 
+     010e0660 "MsoCommandBar" "Debug" 00000000 
+     00a7034a "MsoCommandBar" "Code coverage" 00000000 
+     006503ec "MsoCommandBar" "Standard" 00000000 
+     03f5030e "MsoCommandBar" "MenuBar" 00000000 
+   007f0356 "MsoCommandBarDock" "MsoDockBottom" 00000000 
+   00cf0336 "VsChannel" "" 00000000 
+   007302de "VsChannel" "" 00000000 
+   008f0302 "VsChannel" "" 00000000 
+   003b0342 "VsChannel" "" 00000000 
+   001a0328 "VsStatusBar" "" 00000000 
+     003f02fc "msctls_statusbar32" "" 00000000 
+       004503d0 "msctls_progress32" "" 00000000 
+   00a2038c "GenericPane" "Find and Replace" 00000000 
+     005903be "MsoCommandBarDock" "MsoDockLeft" 00000000 
+     00820340 "MsoCommandBarDock" "MsoDockRight" 00000000 
+     00f703e6 "MsoCommandBarDock" "MsoDockTop" 00000000 
+       00cd0318 "MsoCommandBar" "Unified Find" 00000000 
+     009b02d8 "MsoCommandBarDock" "MsoDockBottom" 00000000 
+     009d03b4 "GenericPane" "" 00000000 
+       009c03d4 "VsFindReplaceWindow" "" 00000000 
+         04540546 "#32770" "" 00000000 
+           006f0442 "ComboBox" "" 00000000 
+             00e104c2 "Edit" "" 00000000 
+           00910534 "Button" ">" 00000000 
+           056204be "ComboBox" "" 00000000 
+             00760474 "Edit" "" 00000000 
+           00af04c6 "Button" ">" 00000000 
+           00ef04b8 "ComboBox" "" 00000000 
+           044a04bc "Button" "   " 00000000 
+           0095048a "Button" "^" 00000000 
+           045a0484 "Button" "Match &case" 00000000 
+           04a104ba "Button" "Match &whole word" 00000000 
+           00b004fa "Button" "&Mark matches" 00000000 
+           045804b2 "Button" "Search &up" 00000000 
+           02a204ac "Button" "Search &hidden text" 00000000 
+           009a04a8 "Button" "Us&e:" 00000000 
+           04a80530 "ComboBox" "" 00000000 
+           007604f4 "Button" "&Find Next" 00000000 
+           139004ea "Button" "&Replace" 00000000 
+           00da0494 "Button" "Replace &All" 00000000 
+           00770448 "Button" "Sk&ip File" 00000000 
+   00ec01c2 "GenericPane" "Call Stack" 00000000 
+     00d50222 "DEBUGPANED" "" 00000000 
+       00d3033e "TREEGRID" "" 00000000 
+   0082028a "GenericPane" "Locals" 00000000 
+     00c101d8 "DEBUGPANED" "" 00000000 
+       010c0288 "TREEGRID" "" 00000000 
+   0124051e "GenericPane" "Toolbox" 00000000 
+     0480051c "TBToolboxPane" "" 00000000 
+   00ee02c6 "GenericPane" "Properties" 00000000 
+     00760322 "VsToolSwitcherPaneWindow" "" 00000000 
+       00f30350 "WindowsForms10.Window.8.app.0.11c7a8c" "Property Browser" 00000000 
+         0044031c "WindowsForms10.COMBOBOX.app.0.11c7a8c" "" 00000000 
+         00bf03f8 "WindowsForms10.Window.8.app.0.11c7a8c" "PropertyGrid" 00000000 
+           00af02b6 "WindowsForms10.Window.8.app.0.11c7a8c" "Description Pane" 00000000 
+             007703bc "WindowsForms10.STATIC.app.0.11c7a8c" "" 00000000 
+             0073036e "WindowsForms10.STATIC.app.0.11c7a8c" "" 00000000 
+           00520378 "WindowsForms10.Window.8.app.0.11c7a8c" "PropertyGridView" 00000000 
+             00b902ec "WindowsForms10.SCROLLBAR.app.0.11c7a8c" "" 00000000 
+             009e02b4 "WindowsForms10.EDIT.app.0.11c7a8c" "" 00000000 
+           00b002f2 "WindowsForms10.Window.8.app.0.11c7a8c" "PropertyGridToolBar" 00000000 
+   002102da "GenericPane" "Class View - xarconverterapp" 00000000 
+     00600372 "VsToolbarParentWnd" "" 00000000 
+       01360662 "MsoCommandBarDock" "MsoDockLeft" 00000000 
+       00860602 "MsoCommandBarDock" "MsoDockRight" 00000000 
+       007c05e4 "MsoCommandBarDock" "MsoDockTop" 00000000 
+         00d305a0 "MsoCommandBar" "Class View" 00000000 
+       010e05da "MsoCommandBarDock" "MsoDockBottom" 00000000 
+       008c0364 "#32770" "" 00000000 
+         009e039a "ComboBox" "" 00000000 
+           00bd03fa "Edit" "" 00000000 
+         00740400 "VsToolbarParentWnd" "" 00000000 
+           04a6049a "MsoCommandBarDock" "MsoDockLeft" 00000000 
+           00dc068c "MsoCommandBarDock" "MsoDockRight" 00000000 
+           012f04b4 "MsoCommandBarDock" "MsoDockTop" 00000000 
+             007c0656 "MsoCommandBar" "Class View Go Toolbar" 00000000 
+           00f005dc "MsoCommandBarDock" "MsoDockBottom" 00000000 
+         00470308 "Button" "" 00000000 
+         009f035e "LiteTreeView32" "Class View - xarconverterapp" 00000000 
+         00920310 "LiteTreeView32" "VsClassViewMembersPane" 00000000 
+         00d6052c "VsSimpleSlider" "" 00000000 
+   04bd0200 "GenericPane" "Error List" 00000000 
+     01660258 "MsoCommandBarDock" "MsoDockLeft" 00000000 
+     00970256 "MsoCommandBarDock" "MsoDockRight" 00000000 
+     00cb027e "MsoCommandBarDock" "MsoDockTop" 00000000 
+       006901b2 "MsoCommandBar" "Error List" 00000000 
+     00c50274 "MsoCommandBarDock" "MsoDockBottom" 00000000 
+     00ba0298 "GenericPane" "" 00000000 
+       00d4029a "RTaskList" "" 00000000 
+         009e0182 "SysHeader32" "" 00000000 
+   00c0022c "MDIClient" "" 00000000 
+     00560366 "EzMdiContainer" "" 00000000 
+       01620a5c "DockingView" "UI.cs" 00000000 
+         01040922 "GenericPane" "UI.cs" 00000000 
+           011f0838 "VsSplitterRoot" "" 00000000 
+             0211093e "VsEditPane" "" 00000000 
+               00720828 "VsTextEditPane" "" 00000000 
+               00080aa6 "ScrollBar" "" 00000000 
+               02390a44 "ScrollBar" "" 00000000 
+       001d09e4 "DockingView" "Errors.cs" 00000000 
+         00eb0876 "GenericPane" "Errors.cs" 00000000 
+           011e091a "VsSplitterRoot" "" 00000000 
+             011f089c "VsEditPane" "" 00000000 
+               00da0826 "VsTextEditPane" "" 00000000 
+               01390a46 "ScrollBar" "" 00000000 
+               00860a3e "ScrollBar" "" 00000000 
+       00e7076a "DockingView" "Timing.cs" 00000000 
+         03a8060e "GenericPane" "Timing.cs" 00000000 
+           00b8055a "VsSplitterRoot" "" 00000000 
+             04e70630 "VsEditPane" "" 00000000 
+               0118066a "VsTextEditPane" "" 00000000 
+               00c90624 "ScrollBar" "" 00000000 
+               00d705a6 "ScrollBar" "" 00000000 
+       007f0458 "DockingView" "xarconverter_form.cs" 00000000 
+         02420420 "GenericPane" "xarconverter_form.cs" 00000000 
+           02670478 "VsSplitterRoot" "" 00000000 
+             008a050e "VsEditPane" "" 00000000 
+               00e30412 "VsTextEditPane" "" 00000000 
+               04890454 "ScrollBar" "" 00000000 
+               00f40532 "ScrollBar" "" 00000000 
+       00a802ee "DockingView" "ConverterEngine.cs" 00000000 
+         00aa03a8 "GenericPane" "ConverterEngine.cs" 00000000 
+           00d203de "VsSplitterRoot" "" 00000000 
+             00aa03d6 "VsEditPane" "" 00000000 
+               006d03a6 "VsTextEditPane" "" 00000000 
+               007c0312 "ScrollBar" "" 00000000 
+               00810370 "ScrollBar" "" 00000000 
+       00db0346 "DockingView" "FormatDescription.cs" 00000000 
+         007002d6 "GenericPane" "FormatDescription.cs" 00000000 
+           009602c0 "VsSplitterRoot" "" 00000000 
+             0055037c "VsEditPane" "" 00000000 
+               00c7037a "VsTextEditPane" "" 00000000 
+               006203ac "ScrollBar" "" 00000000 
+               010602be "ScrollBar" "" 00000000 
+       00c603aa "EzMdiTabOwner" "" 00000000 
+         00f80300 "EzMdiTabs" "" 00000000 
+     0152022e "VBMdiChildH" "" 00000000 
+   009f02cc "VsAutoHide" "" 00000000 
+     0079027c "GenericPane" "Solution Explorer - Solution 'xarconverter' (4 projects)" 00000000 
+       00ba0276 "VsUIHierarchyBaseWin" "" 00000000 
+         00f40158 "MsoCommandBarDock" "MsoDockLeft" 00000000 
+         00470272 "MsoCommandBarDock" "MsoDockRight" 00000000 
+         007201f2 "MsoCommandBarDock" "MsoDockTop" 00000000 
+           00ae01c6 "MsoCommandBar" "Explorer" 00000000 
+         00d00218 "MsoCommandBarDock" "MsoDockBottom" 00000000 
+         007c0268 "SysTreeView32" "Solution Explorer" 00000000 
+     006d02ba "VsAutoBorder" "" 00000000 
+   004e0330 "GenericPane" "Definition (Read-Only)" 00000000 
+     00e403b2 "CodeDefWindowClass" "" 00000000 
+       009203b8 "VsTextEditPane" "" 00000000 
+   00870388 "GenericPane" "XaraAutomation.cs" 00000000 
+     00c002ca "VsSplitterRoot" "" 00000000 
+       006403e8 "VsEditPane" "" 00000000 
+         00750316 "VsTextEditPane" "" 00000000 
+         0080039c "ScrollBar" "" 00000000 
+         009803da "ScrollBar" "" 00000000 
+   0200036c "GenericPane" "Output" 00000000 
+     00880360 "MsoCommandBarDock" "MsoDockLeft" 00000000 
+     006302ac "MsoCommandBarDock" "MsoDockRight" 00000000 
+     0066036a "MsoCommandBarDock" "MsoDockTop" 00000000 
+       008e0394 "MsoCommandBar" "Output Window" 00000000 
+     005a02f0 "MsoCommandBarDock" "MsoDockBottom" 00000000 
+     00930326 "GenericPane" "" 00000000 
+       008a03ee "OutputWindowClass" "" 00000000 
+         009f03f6 "VsTextEditPane" "" 00000000 
+         0080035c "VsTextEditPane" "" 00000000 
+         003702ae "VsTextEditPane" "" 00000000 
+         00900384 "VsTextEditPane" "" 00000000 
+         009002bc "VsTextEditPane" "" 00000000 
+         00b103f4 "VsTextEditPane" "" 00000000 
+         00a4052a "VsTextEditPane" "" 00000000 
+         01020622 "VsTextEditPane" "" 00000000 
+   01390632 "VBSlider" "" 00000000 
+   01610628 "VBSlider" "" 00000000 
+   00980694 "VBSlider" "" 00000000 
+ 018806e0 "IEFrame" "C# 2.0: Create Elegant Code with Anonymous Methods, Iterators, and Partial Classes -- MSDN Maga - Microsoft Internet Explorer" 00000000 
+   015608fe "msctls_statusbar32" "" 00000000 
+     04b5090c "msctls_progress32" "" 00000000 
+   013508b0 "Shell DocObject View" "" 00000000 
+     008d0836 "Internet Explorer_Server" "" 00000000 
+       018a084e "Internet Explorer_TridentCmboBx" "" 00000000 
+ 010d0228 "IEFrame" "Odin - Microsoft Internet Explorer" 00000000 
+   04450282 "msctls_statusbar32" "" 00000000 
+     005501ca "msctls_progress32" "" 00000000 
+   00dd01cc "Shell DocObject View" "" 00000000 
+     00ee01da "Internet Explorer_Server" "" 00000000 
+ 00230634 "rctrl_renwnd32" "Sent Items - Microsoft Outlook" 00000000 
+   003005f6 "OfficeTooltip" "Reply" 00230634 
+   005604de "MsoCommandBarPopup" "Folder Context Menu" 00230634 
+   004f051a "MsoCommandBarShadow" "Folder Context Menu" 00230634 
+   005d0476 "MsoCommandBarShadow" "Folder Context Menu" 00230634 
+   008705f2 "MsoCommandBarDock" "MsoDockLeft" 00000000 
+   003e0614 "MsoCommandBarDock" "MsoDockRight" 00000000 
+   006c069e "MsoCommandBarDock" "MsoDockTop" 00000000 
+     004405ca "MsoCommandBar" "Standard" 00000000 
+       002d077c "RichEdit20W" "" 00000000 
+     002c0608 "MsoCommandBar" "Menu Bar" 00000000 
+       0020059e "RichEdit20W" "" 00000000 
+   003105e2 "MsoCommandBarDock" "MsoDockBottom" 00000000 
+   003d0644 "AfxWndW" "" 00000000 
+     009005ea "WUNDERBAR" "WunderBar" 00000000 
+       005305ac "NativeHWNDHost" "NUIDocumentWindow" 00000000 
+         00330648 "NetUIHWND" "" 00000000 
+   003005aa "msctls_statusbar32" "" 00000000 
+     00610676 "rctrl_sbpwnd32" "" 00000000 
+     004e0678 "rctrl_sbpwnd32" "" 00000000 
+       00370696 "msctls_progress32" "" 00000000 
+     007a0410 "rctrl_sbpwnd32" "" 00000000 
+       00580368 "SysAnimate32" "" 00000000 
+   006006a0 "rctrl_renwnd32" "" 00000000 
+     003005be "rctrl_renwnd32" "" 00000000 
+       003705c8 "MsoCommandBar" "MSO Generic Control Container" 00000000 
+         0006079e "RichEdit20W" "" 00000000 
+         000c07a0 "RichEdit20W" "" 00000000 
+       003c0564 "SysAnimate32" "" 00000000 
+     0047064a "AfxWndW" "" 00000000 
+       00d30152 "SUPERGRID" "Table View" 00000000 
+         00a5013a "ScrollBar" "" 00000000 
+       003b065c "AfxWndW" "" 00000000 
+         0032063a "SysAnimate32" "" 00000000 
+     00390620 "rctrl_renwnd32" "" 00000000 
+       00600686 "AfxWndW" "" 00000000 
+         00b40128 "#32770" "" 00000000 
+           00800120 "RichEdit20WPT" "" 00000000 
+           00680130 "RichEdit20WPT" "" 00000000 
+           017a0030 "RichEdit20WPT" "" 00000000 
+           0052011c "RichEdit20WPT" "" 00000000 
+           006d00dc "AfxWndA" "" 00000000 
+             02db00fa "AfxWndW" "" 00000000 
+               00cc01ac "Internet Explorer_Server" "" 00000000 
+           005e014a "NativeFontCtl" "" 00000000 
+           00b10134 "rctrl_renwnd32" "" 00000000 
+   00a90126 "AfxWndW" "" 00000000 
+ 002601ae "SyncMgrUI" "Microsoft ActiveSync" 00000000 
+   003b01d0 "AfxWnd42s" "ActiveSync Details View" 00000000 
+     003a020c "SysListView32" "" 00000000 
+       000e01e6 "SysHeader32" "" 00000000 
+   00170196 "#32770" "" 00000000 
+     00160236 "msctls_progress32" "Progress1" 00000000 
+     000b01ec "Button" "Resolve items..." 00000000 
+   00490206 "AfxControlBar42s" "" 00000000 
+ 00010086 "Progman" "Program Manager" 00000000 
+   0001008c "SHELLDLL_DefView" "" 00000000 
+     00010092 "SysListView32" "FolderView" 00000000 

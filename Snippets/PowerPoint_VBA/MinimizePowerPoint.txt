@@ -1,0 +1,20 @@
+This code is useful to take your powerpoint window and minimize it completely
+
+It works if powerpoint is in presentation mode.
+
+--------------------
+
+Sub MinimizePowerPoint()
+
+    ' Handle slideshow window
+    If (SlideShowWindows.Count > 0) Then
+        SlideShowWindows(1).View.Exit
+    End If
+    
+
+    ' Handle application window
+    Application.ActiveWindow.WindowState = ppWindowMinimized
+
+End Sub
+
+--------------------
