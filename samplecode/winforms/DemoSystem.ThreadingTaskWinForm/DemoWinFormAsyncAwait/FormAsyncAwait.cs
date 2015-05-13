@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace DemoWinFormAsyncAwait
@@ -12,26 +13,37 @@ namespace DemoWinFormAsyncAwait
 
         public FormAsyncAwait()
         {
-            InitializeComponent();
-            synchronizationContext = System.Threading.SynchronizationContext.Current;
+            this.InitializeComponent();
+            this.synchronizationContext = System.Threading.SynchronizationContext.Current;
 
         }
+
+        private CancellationTokenSource cancellation_token_source;
         private async void buttonStart_Click(object sender, EventArgs e)
         {
-            buttonStart.Enabled = false;
+            this.buttonStart.Enabled = false;
             var count = 0;
+            cancellation_token_source = new CancellationTokenSource();
 
-            await System.Threading.Tasks.Task.Run(() => {count = this.LogRunningOperation();});
+            var cancellation_token = cancellation_token_source.Token;
 
-            buttonStart.Text = string.Format(@"Counter {0}", count);
-            buttonStart.Enabled = true;
+
+            await System.Threading.Tasks.Task.Run(
+                () => { count = this.LogRunningOperation(); }, cancellation_token);
+
+            this.buttonStart.Text = $@"Counter {count}";
+            this.buttonStart.Enabled = true;
         }
 
         private int LogRunningOperation()
         {
-            int count=0;
+            int count = 0;
             for (var i = 0; i <= 5000000; i++)
             {
+                if (this.cancellation_token_source.IsCancellationRequested)
+                {
+                    break;
+                }
                 this.UpdateUI(i);
                 count = i;
             }
@@ -43,21 +55,41 @@ namespace DemoWinFormAsyncAwait
             var timeNow = DateTime.Now;
 
             // this prevents excessive refreshing
-            if ((DateTime.Now - previousTime).Milliseconds <= 100)
+            if ((DateTime.Now - this.previousTime).Milliseconds <= 100)
             {
                 return;
             }
 
             this.synchronizationContext.Post(
-                o => { this.updatex((int)o);}
+                o =>
+                {
+                    int n = (int)o;
+                    this._update_ux_for_real(n);
+                }
                 , value);
 
-            previousTime = timeNow;
+            this.previousTime = timeNow;
         }
 
-        public void updatex(int n)
+        public void _update_ux_for_real(int n)
         {
-            this.buttonStart.Text = string.Format(@"Counter {0}", n);
+            if (this.buttonStart.IsDisposed)
+            {
+                return;
+            }
+
+            if (this.textBox1.IsDisposed)
+            {
+                return;
+            }
+            string s = $@"Counter {n}";
+            this.buttonStart.Text = s;
+            this.textBox1.AppendText(s + "\r\n");
+        }
+
+        private void buttonStop_Click(object sender, EventArgs e)
+        {
+            this.cancellation_token_source.Cancel();
         }
     }
 }
