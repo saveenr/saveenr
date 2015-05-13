@@ -12,19 +12,19 @@ namespace DemoWinFormAsyncAwait
 
         public FormAsyncAwait()
         {
-            InitializeComponent();
-            synchronizationContext = System.Threading.SynchronizationContext.Current;
+            this.InitializeComponent();
+            this.synchronizationContext = System.Threading.SynchronizationContext.Current;
 
         }
         private async void buttonStart_Click(object sender, EventArgs e)
         {
-            buttonStart.Enabled = false;
+            this.buttonStart.Enabled = false;
             var count = 0;
 
             await System.Threading.Tasks.Task.Run(() => {count = this.LogRunningOperation();});
 
-            buttonStart.Text = string.Format(@"Counter {0}", count);
-            buttonStart.Enabled = true;
+            this.buttonStart.Text = string.Format(@"Counter {0}", count);
+            this.buttonStart.Enabled = true;
         }
 
         private int LogRunningOperation()
@@ -43,19 +43,21 @@ namespace DemoWinFormAsyncAwait
             var timeNow = DateTime.Now;
 
             // this prevents excessive refreshing
-            if ((DateTime.Now - previousTime).Milliseconds <= 100)
+            // only update the UI if sufficient time has passed since the last update
+            var time_span = DateTime.Now - this.previousTime;
+            if (time_span.Milliseconds <= 100)
             {
                 return;
             }
 
             this.synchronizationContext.Post(
-                o => { this.updatex((int)o);}
+                o => { this.UpdateStartButton((int)o);}
                 , value);
 
-            previousTime = timeNow;
+            this.previousTime = timeNow;
         }
 
-        public void updatex(int n)
+        public void UpdateStartButton(int n)
         {
             this.buttonStart.Text = string.Format(@"Counter {0}", n);
         }
