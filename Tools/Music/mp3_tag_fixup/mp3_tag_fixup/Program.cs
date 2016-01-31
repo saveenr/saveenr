@@ -11,8 +11,13 @@ namespace mp3_tag_fixup
         static void Main(string[] args)
         {
 
+            TagLib.Id3v2.Tag.DefaultVersion = 3;
+            TagLib.Id3v2.Tag.ForceDefaultVersion = true;
+
             string path = @"D:\music";
-            foreach (var data in DirectoryAndFiles.Recurse(path,"*.mp3"))
+            Console.WriteLine(path);
+
+            foreach (var data in DirectoryHelper.Recurse(path,"*.mp3"))
             {
                 foreach (string filename in data.Files)
                 {
