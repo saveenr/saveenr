@@ -10,7 +10,7 @@ C# 3.0
 	   public string Name;
 	}		
 
-Python or IronPython	
+Python	
 	class Record :
 	   def __init__(self) :
 	        pass
@@ -26,7 +26,7 @@ PowerShell 2.0
 	"@		
 ```
 				
-### Create an instance				
+### Create an instanceof a class			
 
 ```
 C# 3.0	
