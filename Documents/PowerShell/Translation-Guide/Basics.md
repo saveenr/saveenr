@@ -29,7 +29,7 @@ C#
 Python 
     None		
 
-PowerShell 2.0	
+PowerShell
     $null		
 ```
 
@@ -75,7 +75,7 @@ C# 3.0
 
 Python or IronPython	
 	if (a == None) :
-    	# do nothing		
+    	    # do nothing		
 
 PowerShell 2.0	
 	if ( $a –eq $null ) { }		
@@ -85,7 +85,7 @@ PowerShell 2.0
 
 ```
 C# 3.0			
-	N/A
+    N/A
 
 
 Python or IronPython	
@@ -93,5 +93,5 @@ Python or IronPython
 
 
 PowerShell 2.0			
-	N/A
+    N/A
 ```
