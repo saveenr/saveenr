@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TagLib;
 
 namespace mp3_tag_fixup
@@ -14,7 +11,7 @@ namespace mp3_tag_fixup
             TagLib.Id3v2.Tag.DefaultVersion = 3;
             TagLib.Id3v2.Tag.ForceDefaultVersion = true;
 
-            string path = @"D:\music";
+            string path = @"D:\music\downloaded";
             Console.WriteLine(path);
 
             foreach (var data in DirectoryHelper.Recurse(path,"*.mp3"))
@@ -48,15 +45,15 @@ namespace mp3_tag_fixup
             bool perform_save = false;
             string [] album_artists = tagfile.Tag.AlbumArtists;
             string album_artists_merged = string.Join(",", album_artists);
-            album_artists_merged = normalizename(album_artists_merged);
+            album_artists_merged = NormalizeArtistName(album_artists_merged);
 
             string[] contributing_artists = tagfile.Tag.Performers;
             string contributing_artists_merged = string.Join(",", contributing_artists);
-            contributing_artists_merged = normalizename(contributing_artists_merged);
+            contributing_artists_merged = NormalizeArtistName(contributing_artists_merged);
 
             string[] composers = tagfile.Tag.Composers;
             string composers_merged = string.Join(",", composers);
-            composers_merged = normalizename(composers_merged);
+            composers_merged = NormalizeArtistName(composers_merged);
 
             if (album_artists_merged=="")
             {
@@ -84,7 +81,7 @@ namespace mp3_tag_fixup
         {
             bool perform_save = false;
             string title = tagfile.Tag.Title;
-            if (novalue(title))
+            if (IsNullOrEmpty(title))
             {
                 string newtitle = System.IO.Path.GetFileNameWithoutExtension(filename);
                 tagfile.Tag.Title = newtitle;
@@ -94,12 +91,12 @@ namespace mp3_tag_fixup
             return perform_save;
         }
 
-        private static bool novalue(string title)
+        private static bool IsNullOrEmpty(string title)
         {
             return title==null || title.Trim().Length==0;
         }
 
-        private static string normalizename(string s)
+        private static string NormalizeArtistName(string s)
         {
             if (s==null)
             {
@@ -109,31 +106,11 @@ namespace mp3_tag_fixup
             var t = s.Trim().ToLower();
             if (t=="original soundtrack" || t == "soundtrack" || t=="various" || t=="various artists")
             {
-                int x = 7;
                 return "";
             }
 
             return s;
         }
 
-    }
-
-    public static class Extensions
-    {
-        public static void SaveSafe(this TagLib.File file)
-        {
-            bool debug = false;
-            if (debug)
-            {
-                Console.WriteLine("DEBUG Saving file {0}", file.Name);
-                
-            }
-            else
-            {
-                Console.WriteLine("Saving file {0}", file.Name);
-                file.Save();
-                
-            }
-        }
     }
 }
